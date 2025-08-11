@@ -29,6 +29,23 @@ Güvenli IBAN yönetimi uygulaması. Kullanıcılar kendi veya başkalarına ait
 - **QR Kod Tarama**: IBAN'ları QR kod ile paylaşma
 - **Hızlı Düzenleme**: Kolay düzenleme ve silme
 
+## Ekran Görüntüleri
+
+Aşağıdaki görselleri `public/screenshots/` klasörüne yerleştirerek otomatik görüntülenmelerini sağlayabilirsiniz. Önerilen dosya adları:
+
+- `home.png` — Ana Sayfa
+- `add-iban.png` — IBAN Ekleme Modalı
+- `search-filter.png` — Arama ve Filtreleme
+- `qr.png` — QR Kod Görünümü
+
+![Ana Sayfa](public/screenshots/home.png)
+
+![IBAN Ekleme Modalı](public/screenshots/add-iban.png)
+
+![Arama ve Filtreleme](public/screenshots/search-filter.png)
+
+![QR Kod Görünümü](public/screenshots/qr.png)
+
 ## Kullanım
 
 1. **İlk Kullanım**: Uygulamayı açın ve "IBAN Ekle" butonuna tıklayın

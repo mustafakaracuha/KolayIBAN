@@ -31,9 +31,6 @@ function App() {
   const [selectedBank, setSelectedBank] = useState("");
   const [showQR, setShowQR] = useState(null);
   const [hiddenIbans, setHiddenIbans] = useState(new Set());
-  const [isLocked, setIsLocked] = useState(false);
-  const [pin, setPin] = useState("");
-  const [showPinInput, setShowPinInput] = useState(false);
   const [encryptionKey, setEncryptionKey] = useState("");
   const [confirmModal, setConfirmModal] = useState({
     isOpen: false,
@@ -41,11 +38,7 @@ function App() {
     message: "",
     onConfirm: null,
     type: "danger",
-    showPinInput: false,
-    pinValue: "",
   });
-  const [showPinModal, setShowPinModal] = useState(false);
-  const [pinInputValue, setPinInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [showAbout, setShowAbout] = useState(false);
 
@@ -62,10 +55,7 @@ function App() {
     const savedIbans = loadIbans(encryptionKey);
     setIbans(savedIbans);
 
-    // PIN koruması tamamen devre dışı - hiç kontrol etme
-    setIsLocked(false);
-    setShowPinModal(false);
-    
+
     // Loading'i 1 saniye göster
     setTimeout(() => {
       setIsLoading(false);
@@ -230,16 +220,12 @@ function App() {
     return matchesSearch && matchesBank;
   });
 
-  const handleSetupPin = () => {
-    // PIN koruması tamamen devre dışı
-    toast.info("PIN koruması devre dışı bırakıldı");
-  };
-
+ 
   return (
     <div className="h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 flex flex-col">
       <Toaster position="top-center" />
 
-      <Header isLocked={isLocked} onSetupPin={handleSetupPin} onAboutClick={() => setShowAbout(true)} />
+      <Header onAboutClick={() => setShowAbout(true)} />
 
       <div className="w-full px-8 sm:px-4 md:max-w-3xl md:mx-auto py-4 sm:py-8 overflow-y-auto flex-1 bg-transparent">
         <SearchAndFilter
