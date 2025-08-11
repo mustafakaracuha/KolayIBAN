@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="IBAN'larınızı kolayca yönetin - Güvenli ve kolay IBAN yönetimi" />
     <meta name="theme-color" content="#4f46e5" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="/manifest.json?v=2" />
     <title>IBAN Kasa - Güvenli IBAN Kasası</title>
   </head>
   <body>
@@ -16,7 +16,7 @@
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
+          navigator.serviceWorker.register('/sw.js?v=2')
             .then((registration) => {
               console.log('SW registered: ', registration);
             })
