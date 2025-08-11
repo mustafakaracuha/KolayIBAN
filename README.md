@@ -29,19 +29,6 @@ Güvenli IBAN yönetimi uygulaması. Kullanıcılar kendi veya başkalarına ait
 - **QR Kod Tarama**: IBAN'ları QR kod ile paylaşma
 - **Hızlı Düzenleme**: Kolay düzenleme ve silme
 
-## Kurulum
-
-```bash
-# Bağımlılıkları yükle
-npm install
-
-# Geliştirme sunucusunu başlat
-npm run dev
-
-# Production build
-npm run build
-```
-
 ## Kullanım
 
 1. **İlk Kullanım**: Uygulamayı açın ve "IBAN Ekle" butonuna tıklayın
