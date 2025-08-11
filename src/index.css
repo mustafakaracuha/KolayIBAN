@@ -1,0 +1,427 @@
+
+@import "tailwindcss";
+
+/* Modern gradient backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.bg-gradient-success {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.bg-gradient-warning {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Modern shadows */
+.shadow-modern {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Smooth transitions - only for specific elements */
+button, input, select, .card-modern {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Prevent initial layout shift */
+.card-modern {
+  transform: scale(1);
+}
+
+/* Prevent scroll on page reload */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll */
+.container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+/* Focus styles for better accessibility */
+button:focus, input:focus, select:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating button pulse animation */
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Modern button styles */
+.btn-modern {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-modern:hover {
+  transform: translateY(-2px);
+  /* box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4); */
+}
+
+.btn-modern:active {
+  transform: translateY(0);
+}
+
+/* Modern card styles */
+.card-modern {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Tag styles for better visibility */
+.tag-bank {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important;
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tag-custom {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%) !important;
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* IbanList container - no background */
+.iban-list-container {
+  background: transparent !important;
+}
+
+/* Modern input styles */
+.input-modern {
+  background: rgba(249, 249, 249, 0.9);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.input-modern:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .mobile-optimized {
+    padding: 1rem;
+  }
+  
+  .card-modern {
+    border-radius: 16px;
+    /* margin: 0.5rem; */
+  }
+
+  /* Mobile header */
+  .mobile-header {
+    padding: 1rem;
+  }
+
+  .mobile-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .mobile-header p {
+    font-size: 0.875rem;
+  }
+
+  /* Mobile search and filter */
+  .mobile-search-filter {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .mobile-search-filter input,
+  .mobile-search-filter select {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .mobile-search-filter button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Mobile IBAN cards */
+  .mobile-iban-card {
+    padding: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-iban-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .mobile-iban-card .iban-number {
+    font-size: 0.875rem;
+    word-break: break-all;
+  }
+
+  /* Mobile action buttons */
+  .mobile-action-buttons {
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .mobile-action-buttons button {
+    padding: 0.5rem;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .mobile-action-buttons button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  /* Mobile modal */
+  .mobile-modal {
+    padding: 1rem;
+    margin: 0.5rem;
+    max-height: 90vh;
+  }
+
+  .mobile-modal h2 {
+    font-size: 1.5rem;
+  }
+
+  .mobile-modal input,
+  .mobile-modal select {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .mobile-modal button {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  /* Touch-friendly improvements */
+  .touch-friendly {
+    min-height: 45px;
+    min-width: 44px;
+  }
+
+  /* Better spacing for mobile */
+  .mobile-spacing {
+    gap: 0.75rem;
+  }
+
+  /* Mobile grid adjustments */
+  .mobile-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  /* Mobile text sizes */
+  .mobile-text-sm {
+    font-size: 0.875rem;
+  }
+
+  .mobile-text-base {
+    font-size: 1rem;
+  }
+
+  .mobile-text-lg {
+    font-size: 1.125rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  /* Background */
+  body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  }
+
+  /* Cards */
+  .card-modern {
+    background: rgba(30, 41, 59, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Inputs */
+  .input-modern {
+    background: rgba(30, 41, 59, 0.9);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .input-modern:focus {
+    background: rgba(30, 41, 59, 1);
+    border-color: #667eea;
+  }
+
+  .input-modern::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* Text colors */
+  .text-gray-800 {
+    color: #f1f5f9;
+  }
+
+  .text-gray-700 {
+    color: #e2e8f0;
+  }
+
+  .text-gray-600 {
+    color: #cbd5e1;
+  }
+
+  .text-gray-500 {
+    color: #94a3b8;
+  }
+
+  .text-gray-400 {
+    color: #64748b;
+  }
+
+  /* IBAN background */
+  .bg-gray-50 {
+    background: rgba(51, 65, 85, 0.5);
+  }
+
+  /* Borders */
+  .border-gray-200 {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .border-gray-300 {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar-track {
+    background: #1e293b;
+  }
+
+  /* Modal backdrop */
+  .bg-black\/50 {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  /* QR code background */
+  .bg-white {
+    background: rgba(30, 41, 59, 0.95);
+  }
+
+  /* Button hover states */
+  .hover\:bg-gray-50:hover {
+    background: rgba(51, 65, 85, 0.5);
+  }
+
+  /* Focus states */
+  button:focus, input:focus, select:focus {
+    outline-color: #667eea;
+  }
+}
