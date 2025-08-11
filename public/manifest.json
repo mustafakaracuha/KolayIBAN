@@ -2,11 +2,16 @@
   "name": "IBAN Kasa - Güvenli IBAN Kasası",
   "short_name": "IBAN Kasa",
   "description": "IBAN'larınızı kolayca yönetin - Güvenli ve kolay IBAN yönetimi",
+  "version": "1.0.1",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4f46e5",
   "orientation": "portrait-primary",
+  "categories": ["finance", "productivity"],
+  "lang": "tr",
+  "dir": "ltr",
   "icons": [
     {
       "src": "/favicon.svg",

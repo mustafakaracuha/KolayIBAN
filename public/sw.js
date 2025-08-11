@@ -1,8 +1,9 @@
-const CACHE_NAME = 'iban-saver-v1';
+const CACHE_NAME = 'iban-saver-v3';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/manifest.json'
+  '/manifest.json',
+  '/favicon.svg'
 ];
 
 self.addEventListener('install', (event) => {

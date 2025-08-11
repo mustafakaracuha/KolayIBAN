@@ -9,14 +9,18 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    target: 'es2015',
+    minify: 'terser',
     rollupOptions: {
       output: {
         manualChunks: undefined
       }
-    },
-    target: 'es2015'
+    }
   },
   esbuild: {
     target: 'es2015'
+  },
+  server: {
+    host: true
   }
 })
