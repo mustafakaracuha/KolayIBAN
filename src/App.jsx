@@ -11,7 +11,6 @@ import FloatingAddButton from "./components/FloatingAddButton";
 
 import LoadingSpinner from "./components/LoadingSpinner";
 import ScrollToTop from "./components/ScrollToTop";
-import AboutModal from "./components/AboutModal";
 
 // Utils
 import {
@@ -291,7 +290,6 @@ function App() {
       
       <ScrollToTop />
       <FloatingAddButton onClick={() => setShowForm(true)} />
-      <AboutModal isOpen={showAbout} onClose={() => setShowAbout(false)} />
     </div>
   );
 }
