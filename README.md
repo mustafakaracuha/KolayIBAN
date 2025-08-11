@@ -6,7 +6,6 @@ Güvenli IBAN yönetimi uygulaması. Kullanıcılar kendi veya başkalarına ait
 
 ### 🔐 Güvenlik
 - **Şifreleme**: IBAN bilgileri AES şifreleme ile güvenli şekilde saklanır
-- **PIN Koruması**: Opsiyonel PIN kodu ile uygulama kilitleme
 - **Yerel Depolama**: Veriler cihazda şifrelenmiş olarak saklanır
 
 ### 📱 Mobil Uygulama Deneyimi
@@ -46,16 +45,15 @@ npm run build
 ## Kullanım
 
 1. **İlk Kullanım**: Uygulamayı açın ve "IBAN Ekle" butonuna tıklayın
-2. **PIN Ayarlama**: Güvenlik için sağ üstteki kilit ikonuna tıklayarak PIN ayarlayın
-3. **IBAN Ekleme**: 
+2. **IBAN Ekleme**: 
    - İsim (zorunlu)
    - IBAN (zorunlu, otomatik formatlanır)
    - Banka adı (opsiyonel, otomatik algılanır)
    - Açıklama ve etiketler (opsiyonel)
-4. **Arama**: Üst kısımdaki arama kutusunu kullanın
-5. **Filtreleme**: Banka dropdown'ından filtreleme yapın
-6. **Kopyalama**: IBAN kartındaki kopya ikonuna tıklayın
-7. **QR Kod**: QR kod ikonuna tıklayarak QR kod görüntüleyin
+3. **Arama**: Üst kısımdaki arama kutusunu kullanın
+4. **Filtreleme**: Banka dropdown'ından filtreleme yapın
+5. **Kopyalama**: IBAN kartındaki kopya ikonuna tıklayın
+6. **QR Kod**: QR kod ikonuna tıklayarak QR kod görüntüleyin
 
 ## Teknolojiler
 
@@ -71,7 +69,6 @@ npm run build
 ## Güvenlik
 
 - Tüm IBAN verileri AES-256 şifreleme ile korunur
-- PIN kodu yerel olarak saklanır
 - Veriler hiçbir zaman buluta gönderilmez
 - Offline çalışma ile internet bağımlılığı yok
 
@@ -79,8 +76,6 @@ npm run build
 
 - Ana ekrana eklenebilir
 - Offline çalışma
-- Push notification desteği (gelecek)
-- App-like deneyim
 
 ## Lisans
 
