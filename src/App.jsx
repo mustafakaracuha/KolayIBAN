@@ -220,7 +220,44 @@ function App() {
  
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 flex flex-col">
-      <Toaster position="top-center" />
+      <Toaster 
+        position="bottom-center" 
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: 'var(--toast-bg)',
+            color: 'var(--toast-color)',
+            border: '1px solid var(--toast-border)',
+            borderRadius: '12px',
+            fontSize: '14px',
+            fontWeight: '500',
+            padding: '12px 16px',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)',
+          },
+          success: {
+            iconTheme: {
+              primary: '#10b981',
+              secondary: '#ffffff',
+            },
+            style: {
+              background: 'var(--toast-success-bg)',
+              color: 'var(--toast-success-color)',
+              border: '1px solid var(--toast-success-border)',
+            },
+          },
+          error: {
+            iconTheme: {
+              primary: '#ef4444',
+              secondary: '#ffffff',
+            },
+            style: {
+              background: 'var(--toast-error-bg)',
+              color: 'var(--toast-error-color)',
+              border: '1px solid var(--toast-error-border)',
+            },
+          },
+        }}
+      />
 
       <Header />
 
