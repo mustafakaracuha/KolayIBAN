@@ -1,26 +1,26 @@
 // Banka logoları mapping
 export const bankLogos = {
   // Büyük Bankalar
-  "Ziraat Bankası": "/bank-logos/ziraat.png",
-  "İş Bankası": "/bank-logos/isbank.png",
-  "Garanti BBVA": "/bank-logos/garanti.png",
-  "Akbank": "/bank-logos/akbank.png",
-  "Yapı Kredi": "/bank-logos/yapikredi.png",
-  "VakıfBank": "/bank-logos/vakifbank.png",
-  "Halkbank": "/bank-logos/halkbank.png",
-  "Denizbank": "/bank-logos/denizbank.png",
-  "QNB Finansbank": "/bank-logos/qnb.png",
-  "ING Bank": "/bank-logos/ing.png",
-  "HSBC": "/bank-logos/hsbc.png",
-  "TEB": "/bank-logos/teb.png",
-  "Şekerbank": "/bank-logos/sekerbank.png",
-  "Türkiye Finans": "/bank-logos/turkiyefinans.png",
-  "Albaraka Türk": "/bank-logos/albaraka.png",
-  "Kuveyt Türk": "/bank-logos/kuveytturk.png",
-  "Vakıf Katılım": "/bank-logos/vakifkatilim.png",
-  "Ziraat Katılım": "/bank-logos/ziraatkatilim.png",
-  "İş Katılım": "/bank-logos/iskatilim.png",
-  "Türkiye Emlak Katılım": "/bank-logos/emlakkatilim.png"
+  "Ziraat Bankası": "public/bank-logos/ziraat.png",
+  "İş Bankası": "public/bank-logos/isbank.png",
+  "Garanti BBVA": "public/bank-logos/garanti.png",
+  "Akbank": "public/bank-logos/akbank.png",
+  "Yapı Kredi": "public/bank-logos/yapikredi.png",
+  "VakıfBank": "public/bank-logos/vakifbank.png",
+  "Halkbank": "public/bank-logos/halkbank.png",
+  "Denizbank": "public/bank-logos/denizbank.png",
+  "QNB Finansbank": "public/bank-logos/qnb.png",
+  "ING Bank": "public/bank-logos/ing.png",
+  "HSBC": "public/bank-logos/hsbc.png",
+  "TEB": "public/bank-logos/teb.png",
+  "Şekerbank": "public/bank-logos/sekerbank.png",
+  "Türkiye Finans": "public/bank-logos/turkiyefinans.png",
+  "Albaraka Türk": "public/bank-logos/albaraka.png",
+  "Kuveyt Türk": "public/bank-logos/kuveytturk.png",
+  "Vakıf Katılım": "public/bank-logos/vakifkatilim.png",
+  "Ziraat Katılım": "public/bank-logos/ziraatkatilim.png",
+  "İş Katılım": "public/bank-logos/iskatilim.png",
+  "Türkiye Emlak Katılım": "public/bank-logos/emlakkatilim.png"
 };
 
 // Banka logosu getir

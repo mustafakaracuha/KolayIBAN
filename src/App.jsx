@@ -8,8 +8,6 @@ import IbanList from "./components/IbanList";
 import AddIbanModal from "./components/AddIbanModal";
 import ConfirmModal from "./components/ConfirmModal";
 import FloatingAddButton from "./components/FloatingAddButton";
-
-import LoadingSpinner from "./components/LoadingSpinner";
 import ScrollToTop from "./components/ScrollToTop";
 
 // Utils
@@ -134,7 +132,7 @@ function App() {
         createdAt: new Date().toISOString(),
       };
 
-      const updatedIbans = [...ibans, newIban];
+      const updatedIbans = [newIban,...ibans];
       if (saveIbans(updatedIbans, encryptionKey)) {
         setIbans(updatedIbans);
         setFormData({
