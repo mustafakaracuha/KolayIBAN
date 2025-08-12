@@ -34,7 +34,7 @@ function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700">
       {/* Hero Section */}
-      <div className="pt-8 sm:pt-6 pb-12 sm:pb-16 relative overflow-hidden">
+      <div className="pt-8 sm:pt-14 pb-12 sm:pb-16 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-purple-600/5 to-pink-600/5"></div>
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -47,13 +47,6 @@ function AboutPage() {
               <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-6 sm:mb-8 shadow-2xl animate-pulse relative">
                 <Shield className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-3xl animate-ping"></div>
-              </div>
-            </div>
-            
-            <div className="mb-6">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4 shadow-lg">
-                <Sparkles className="w-4 h-4" />
-                Yeni Nesil IBAN Yönetimi
               </div>
             </div>
             
