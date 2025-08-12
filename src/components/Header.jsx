@@ -12,7 +12,7 @@ import {
 function Header({}) {
   return (
     <div className="bg-gradient-primary shadow-modern overflow-hidden">
-      <div className="w-full px-3 sm:px-4 md:max-w-4xl md:mx-auto md:px-6 py-3 sm:py-4 md:py-6 mobile-header">
+      <div className="w-full px-3 sm:px-4 md:max-w-3xl md:mx-auto md:px-4 py-3 sm:py-4 md:py-6 mobile-header">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3 md:gap-4">
             <div className="p-2 md:p-3 bg-white/20 rounded-xl md:rounded-2xl backdrop-blur-sm">
