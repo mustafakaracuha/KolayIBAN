@@ -111,7 +111,6 @@ function AboutPage() {
                 to="/home" 
                 className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white px-8 py-4 rounded-2xl font-bold text-lg sm:text-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 group"
               >
-                <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform" />
                 İlk IBAN'ını Ekle
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
               </Link>
