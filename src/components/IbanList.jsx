@@ -67,7 +67,7 @@ function IbanList({
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100">
             IBAN'larım
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1">
+          <p className="text-sm sm:text-base text-gray-500/70 dark:text-gray-400/70 mt-1">
             {filteredIbans.length} IBAN kaydedildi
           </p>
         </div>
