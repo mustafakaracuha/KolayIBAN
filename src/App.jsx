@@ -16,7 +16,6 @@ import ScrollToTop from "./components/ScrollToTop";
 import {
   validateIBAN,
   formatIBAN,
-  detectBank,
   turkishBanks,
 } from "./utils/ibanUtils";
 import { loadIbans, saveIbans } from "./utils/storageUtils";
@@ -155,7 +154,7 @@ function App() {
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
-    toast.success("IBAN panoya kopyalandı!");
+    toast.success("IBAN kopyalandı!");
   };
 
   const editIban = (iban) => {

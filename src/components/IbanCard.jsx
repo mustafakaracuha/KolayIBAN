@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 import { useState, useEffect } from "react";
+import { getBankLogo, isBank, getBankColor } from "../utils/bankLogos";
 
 function IbanCard({
   iban,
@@ -37,14 +38,39 @@ function IbanCard({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [showMenu]);
 
+
+
   return (
     <div className="card-modern p-2 sm:p-4 md:p-8 transition-all duration-300 mobile-iban-card w-full shadow-modern">
       <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
         <div className="flex-1">
           <div className="flex items-center gap-2 md:gap-4 mb-2 md:mb-4">
-            <div className="p-1.5 md:p-3 bg-gradient-primary rounded-xl md:rounded-2xl">
-              <User className="w-5 h-5 md:w-6 md:h-6 text-white" />
-            </div>
+            {iban.bankName && isBank(iban.bankName) ? (
+              getBankLogo(iban.bankName) ? (
+                <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl overflow-hidden bg-white border-2 border-gray-200 dark:border-gray-600 flex items-center justify-center">
+                  <img 
+                    src={getBankLogo(iban.bankName)} 
+                    alt={iban.bankName}
+                    className="w-10 h-10 md:w-12 md:h-12 p-1 object-contain"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="hidden p-1.5 md:p-3 bg-gradient-primary rounded-xl md:rounded-2xl">
+                    <Building className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                  </div>
+                </div>
+              ) : (
+                <div className={`w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl flex items-center justify-center ${getBankColor(iban.bankName)}`}>
+                  <Building className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                </div>
+              )
+            ) : (
+              <div className="p-1.5 md:p-3 bg-gradient-primary rounded-xl md:rounded-2xl">
+                <User className="w-5 h-5 md:w-6 md:h-6 text-white" />
+              </div>
+            )}
             <div className="flex-1">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg md:text-2xl font-bold text-gray-800 dark:text-gray-100 mb-1 md:mb-2">
