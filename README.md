@@ -31,13 +31,6 @@ Güvenli IBAN yönetimi uygulaması. Kullanıcılar kendi veya başkalarına ait
 
 ## Ekran Görüntüleri
 
-Aşağıdaki görselleri `public/screenshots/` klasörüne yerleştirerek otomatik görüntülenmelerini sağlayabilirsiniz. Önerilen dosya adları:
-
-- `home.png` — Ana Sayfa
-- `add-iban.png` — IBAN Ekleme Modalı
-- `search-filter.png` — Arama ve Filtreleme
-- `qr.png` — QR Kod Görünümü
-
 ![Ana Sayfa](public/screenshots/home.png)
 
 ![IBAN Ekleme Modalı](public/screenshots/add-iban.png)
