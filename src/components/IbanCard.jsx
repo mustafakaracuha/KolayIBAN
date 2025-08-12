@@ -40,13 +40,7 @@ function IbanCard({
 
 
 
-  // Debug için banka bilgilerini logla
-  console.log('IBAN Card Debug:', {
-    bankName: iban.bankName,
-    isBank: isBank(iban.bankName),
-    hasLogo: getBankLogo(iban.bankName),
-    logoPath: getBankLogo(iban.bankName)
-  });
+
 
   return (
     <div className="card-modern p-2 sm:p-4 md:p-8 transition-all duration-300 mobile-iban-card w-full shadow-modern">
@@ -60,10 +54,7 @@ function IbanCard({
                      src={getBankLogo(iban.bankName)} 
                      alt={iban.bankName}
                      className="w-10 h-10 md:w-12 md:h-12 p-1 object-contain"
-                     onLoad={() => console.log('Logo başarıyla yüklendi:', iban.bankName, getBankLogo(iban.bankName))}
                      onError={(e) => {
-                       console.log('Logo yüklenemedi:', iban.bankName, getBankLogo(iban.bankName));
-                       console.log('Hata detayı:', e.target.src);
                        e.target.style.display = 'none';
                        e.target.nextSibling.style.display = 'flex';
                      }}
