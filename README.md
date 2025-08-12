@@ -125,14 +125,6 @@ MIT License
 - **GitHub Discussions**: Öneriler ve tartışmalar için
 - **Email**: karacuhaa58@gmail.com
 
-## Katkıda Bulunma
-
-1. Fork yapın
-2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Commit yapın (`git commit -m 'Add amazing feature'`)
-4. Push yapın (`git push origin feature/amazing-feature`)
-5. Pull Request oluşturun
-
 ---
 
 **IBAN Kasa** - IBAN'larınızı güvenle saklayın, hızlıca erişin! 🔐💳
