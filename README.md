@@ -12,6 +12,7 @@ Güvenli IBAN yönetimi uygulaması. Kullanıcılar kendi veya başkalarına ait
 - **PWA Desteği**: Ana ekrana eklenebilir
 - **Offline Çalışma**: İnternet olmadan da kullanılabilir
 - **Responsive Tasarım**: Tüm cihazlarda mükemmel görünüm
+- **Tema Desteği**: Açık/koyu tema ve sistem teması desteği
 
 ### 💳 IBAN Yönetimi
 - **Otomatik Format**: IBAN'lar otomatik olarak formatlanır
