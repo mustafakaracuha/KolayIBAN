@@ -40,6 +40,14 @@ function IbanCard({
 
 
 
+  // Debug için banka bilgilerini logla
+  console.log('IBAN Card Debug:', {
+    bankName: iban.bankName,
+    isBank: isBank(iban.bankName),
+    hasLogo: getBankLogo(iban.bankName),
+    logoPath: getBankLogo(iban.bankName)
+  });
+
   return (
     <div className="card-modern p-2 sm:p-4 md:p-8 transition-all duration-300 mobile-iban-card w-full shadow-modern">
       <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
@@ -48,15 +56,18 @@ function IbanCard({
             {iban.bankName && isBank(iban.bankName) ? (
               getBankLogo(iban.bankName) ? (
                 <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl overflow-hidden bg-white border-2 border-gray-200 dark:border-gray-600 flex items-center justify-center">
-                  <img 
-                    src={getBankLogo(iban.bankName)} 
-                    alt={iban.bankName}
-                    className="w-10 h-10 md:w-12 md:h-12 p-1 object-contain"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.nextSibling.style.display = 'flex';
-                    }}
-                  />
+                                     <img 
+                     src={getBankLogo(iban.bankName)} 
+                     alt={iban.bankName}
+                     className="w-10 h-10 md:w-12 md:h-12 p-1 object-contain"
+                     onLoad={() => console.log('Logo başarıyla yüklendi:', iban.bankName, getBankLogo(iban.bankName))}
+                     onError={(e) => {
+                       console.log('Logo yüklenemedi:', iban.bankName, getBankLogo(iban.bankName));
+                       console.log('Hata detayı:', e.target.src);
+                       e.target.style.display = 'none';
+                       e.target.nextSibling.style.display = 'flex';
+                     }}
+                   />
                   <div className="hidden p-1.5 md:p-3 bg-gradient-primary rounded-xl md:rounded-2xl">
                     <Building className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>

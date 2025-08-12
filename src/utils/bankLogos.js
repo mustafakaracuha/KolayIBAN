@@ -25,11 +25,16 @@ export const bankLogos = {
 
 // Banka logosu getir
 export const getBankLogo = (bankName) => {
+  console.log('getBankLogo çağrıldı:', bankName);
+  console.log('Logo yolu:', bankLogos[bankName]);
   return bankLogos[bankName] || null;
 };
 
 // Banka tipini kontrol et (sadece bankalar)
 export const isBank = (bankName) => {
+  console.log('isBank çağrıldı:', bankName);
+  console.log('Banka listesinde var mı:', bankLogos.hasOwnProperty(bankName));
+  
   if (!bankName) return false;
   
   // Direkt olarak bankLogos objesinde varsa banka olarak kabul et
