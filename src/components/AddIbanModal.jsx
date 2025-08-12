@@ -1,5 +1,5 @@
 import { X, User, CreditCard, Building, FileText, Tags } from 'lucide-react'
-import { getBankFromIBAN } from '../utils/ibanUtils';
+import { getBankFromIBAN, formatIBAN } from '../utils/ibanUtils';
 
 function AddIbanModal({ 
   showForm, 
@@ -69,7 +69,7 @@ function AddIbanModal({
                 onChange={(e) => {
                   const value = e.target.value.toUpperCase()
                   
-                  // IBAN'dan banka adını otomatik çıkar
+                  // IBAN'dan banka adını otomatik çıkar (formatlanmamış halde)
                   const detectedBank = getBankFromIBAN(value)
                   
                   setFormData({
@@ -77,6 +77,16 @@ function AddIbanModal({
                     iban: value,
                     bankName: detectedBank || ""
                   })
+                }}
+                onBlur={(e) => {
+                  // Yazım bittiğinde formatla (sadece geçerli IBAN ise)
+                  if (e.target.value.length >= 26) {
+                    const formattedIban = formatIBAN(e.target.value)
+                    setFormData({
+                      ...formData,
+                      iban: formattedIban
+                    })
+                  }
                 }}
                 className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-slate-700 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                 placeholder="TR00 0000 0000 0000 0000 0000 00"
