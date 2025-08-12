@@ -2,7 +2,7 @@ import { Github, Twitter, Linkedin, Mail, Lock } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="md:hidden mt-2 pb-20 px-4">
+    <footer className="md:hidden mt-2 pb-12 px-4">
       <div className="bg-gradient-to-br from-white/80 to-white/60 dark:from-slate-800/80 dark:to-slate-800/60 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-2xl p-4 text-center shadow-soft">
         <div className="h-1 w-12 mx-auto bg-gradient-primary rounded-full mb-3 animate-pulse" />
         <p className="text-xs text-gray-600 dark:text-gray-300 mb-1">
@@ -16,7 +16,7 @@ function Footer() {
             href="https://github.com/mustafakaracuha"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-white/10 rounded-xl transition-all duration-300 shadow-sm"
+            className="p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-white/10 rounded-xl transition-all duration-300"
             title="GitHub"
           >
             <Github className="w-4 h-4" />
@@ -25,7 +25,7 @@ function Footer() {
             href="https://twitter.com/muskaracuha"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-white/10 rounded-xl transition-all duration-300 shadow-sm"
+            className="p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-white/10 rounded-xl transition-all duration-300"
             title="Twitter"
           >
             <Twitter className="w-4 h-4" />
@@ -34,14 +34,14 @@ function Footer() {
             href="https://linkedin.com/in/mustafakaracuha"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-white/10 rounded-xl transition-all duration-300 shadow-sm"
+            className="p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-white/10 rounded-xl transition-all duration-300"
             title="LinkedIn"
           >
             <Linkedin className="w-4 h-4" />
           </a>
           <a
             href="mailto:karacuhaa58@gmail.com"
-            className="p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-white/10 rounded-xl transition-all duration-300 shadow-sm"
+            className="p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-white/10 rounded-xl transition-all duration-300"
             title="E-posta"
           >
             <Mail className="w-4 h-4" />
