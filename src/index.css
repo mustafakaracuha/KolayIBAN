@@ -4,13 +4,13 @@
 /* Toast CSS Variables */
 :root {
   --toast-bg: #ffffff;
-  --toast-color: #374151;
+  --toast-text: #374151;
   --toast-border: #e5e7eb;
   --toast-success-bg: #f0fdf4;
-  --toast-success-color: #166534;
+  --toast-success-text: #166534;
   --toast-success-border: #bbf7d0;
   --toast-error-bg: #fef2f2;
-  --toast-error-color: #dc2626;
+  --toast-error-text: #dc2626;
   --toast-error-border: #fecaca;
 }
 
@@ -18,13 +18,13 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --toast-bg: #1e293b;
-    --toast-color: #f1f5f9;
+    --toast-text: #ffffff;
     --toast-border: #475569;
     --toast-success-bg: #064e3b;
-    --toast-success-color: #6ee7b7;
+    --toast-success-text: #ffffff;
     --toast-success-border: #065f46;
     --toast-error-bg: #450a0a;
-    --toast-error-color: #fca5a5;
+    --toast-error-text: #ffffff;
     --toast-error-border: #7f1d1d;
   }
 }

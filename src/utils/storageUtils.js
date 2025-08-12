@@ -1,5 +1,15 @@
 import CryptoJS from 'crypto-js'
 
+export const generateEncryptionKey = () => {
+  // 32 karakterlik rastgele bir anahtar oluştur
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+  let result = ''
+  for (let i = 0; i < 32; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length))
+  }
+  return result
+}
+
 export const encryptData = (data, encryptionKey = 'default-key-123') => {
   return CryptoJS.AES.encrypt(JSON.stringify(data), encryptionKey).toString()
 }
