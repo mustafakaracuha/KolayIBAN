@@ -36,19 +36,3 @@ export const saveIbans = (ibans, encryptionKey) => {
     return false
   }
 }
-
-export const checkLockStatus = () => {
-  return localStorage.getItem('iban-saver-pin') !== null
-}
-
-export const setupPin = (pin) => {
-  localStorage.setItem('iban-saver-pin', pin)
-}
-
-export const verifyPin = (pin) => {
-  return pin === localStorage.getItem('iban-saver-pin')
-}
-
-export const removePin = () => {
-  localStorage.removeItem('iban-saver-pin')
-}
