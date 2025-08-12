@@ -81,8 +81,6 @@ function Header() {
               <span>© 2025 IBAN Kasa</span>
               <span className="opacity-50">•</span>
               <span>Veriler cihazınızda saklanır</span>
-              <span className="opacity-50">•</span>
-              <span>Made with ❤️</span>
             </div>
           </div>
         </div>

@@ -1,6 +1,4 @@
-// Banka logoları mapping
 export const bankLogos = {
-  // Büyük Bankalar
   "Ziraat Bankası": "/bank-logos/ziraat.png?v=1",
   "İş Bankası": "/bank-logos/isbank.png?v=1",
   "Garanti BBVA": "/bank-logos/garanti.png?v=1",
@@ -19,24 +17,20 @@ export const bankLogos = {
   "Kuveyt Türk": "/bank-logos/kuveytturk.png?v=1",
   "Vakıf Katılım": "/bank-logos/vakifkatilim.png?v=1",
   "Ziraat Katılım": "/bank-logos/ziraatkatilim.png?v=1",
-  "İş Katılım": "/bank-logos/iskatilim.png?v=1",
+  "İş Katılım": "/bank-logos/isbank.png?v=1",
   "Türkiye Emlak Katılım": "/bank-logos/emlakkatilim.png?v=1"
 };
 
-// Banka logosu getir
 export const getBankLogo = (bankName) => {
   return bankLogos[bankName] || null;
 };
 
-// Banka tipini kontrol et (sadece bankalar)
 export const isBank = (bankName) => {
   if (!bankName) return false;
   
-  // Direkt olarak bankLogos objesinde varsa banka olarak kabul et
   return bankLogos.hasOwnProperty(bankName);
 };
 
-// Banka rengi getir (logo yoksa renk kullan)
 export const getBankColor = (bankName) => {
   const bankColors = {
     "Ziraat Bankası": "bg-red-600",

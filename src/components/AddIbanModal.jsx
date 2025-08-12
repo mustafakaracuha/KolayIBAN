@@ -84,24 +84,26 @@ function AddIbanModal({
               />
             </div>
 
-            {/* Banka Adı (Otomatik Tespit) */}
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2 flex items-center gap-2">
-                <Building className="w-4 h-4 text-purple-600" />
-                Banka Adı
-              </label>
-              <div className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-slate-700 text-gray-900 dark:text-white">
-                {formData.bankName ? (
-                  <div className="flex items-center gap-2">
-                    <span className="text-green-600 dark:text-green-400">✓</span>
-                    <span className="font-medium">{formData.bankName}</span>
-                    <span className="text-xs text-gray-500">(Otomatik tespit edildi)</span>
-                  </div>
-                ) : (
-                  <span className="text-gray-500">IBAN girin, banka otomatik tespit edilecek</span>
-                )}
+            {/* Banka Adı (Otomatik Tespit) - Sadece IBAN girildiğinde göster */}
+            {formData.iban && (
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2 flex items-center gap-2">
+                  <Building className="w-4 h-4 text-purple-600" />
+                  Banka Adı
+                </label>
+                <div className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-slate-700 text-gray-900 dark:text-white">
+                  {formData.bankName ? (
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-600 dark:text-green-400">✓</span>
+                      <span className="font-medium">{formData.bankName}</span>
+                      <span className="text-xs text-gray-500">(Otomatik tespit edildi)</span>
+                    </div>
+                  ) : (
+                    <span className="text-gray-500">Banka tespit edilemedi</span>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
             
             {/* Açıklama */}
             <div>

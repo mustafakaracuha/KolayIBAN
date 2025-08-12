@@ -58,22 +58,14 @@ export const turkishBanks = [
   "Türkiye Emlak Katılım"
 ];
 
-// IBAN'dan banka adını çıkar
 export const getBankFromIBAN = (iban) => {
   if (!iban || iban.length < 7) return null;
   
   const cleanIban = iban.replace(/\s/g, "").toUpperCase();
   
-  // Debug için log
-  console.log('IBAN:', cleanIban);
-  console.log('IBAN karakterleri:', cleanIban.split('').map((char, i) => `${i}:${char}`).join(' '));
-  
-  // TR800006200050000006600832 -> 0062 (5-8. haneler)
   const bankCode = cleanIban.substring(5, 9);
-  console.log('Banka kodu:', bankCode);
-  
+
   const detectedBank = bankCodes[bankCode];
-  console.log('Tespit edilen banka:', detectedBank);
   
   return detectedBank || null;
 };

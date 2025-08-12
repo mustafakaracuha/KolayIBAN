@@ -16,7 +16,8 @@ Güvenli IBAN yönetimi uygulaması. Kullanıcılar kendi veya başkalarına ait
 ### 💳 IBAN Yönetimi
 - **Otomatik Format**: IBAN'lar otomatik olarak formatlanır
 - **Doğrulama**: IBAN formatı otomatik kontrol edilir
-- **Banka Tanıma**: Türk bankaları otomatik algılanır
+- **Otomatik Banka Tespiti**: IBAN girildiğinde banka otomatik algılanır
+- **Türk Bankaları Desteği**: 19+ Türk bankası için otomatik tanıma
 - **QR Kod**: IBAN'lar için QR kod oluşturma
 
 ### 🔍 Arama ve Filtreleme
@@ -45,7 +46,7 @@ Güvenli IBAN yönetimi uygulaması. Kullanıcılar kendi veya başkalarına ait
 2. **IBAN Ekleme**: 
    - İsim (zorunlu)
    - IBAN (zorunlu, otomatik formatlanır)
-   - Banka adı (opsiyonel, otomatik algılanır)
+   - Banka adı (otomatik tespit edilir)
    - Açıklama ve etiketler (opsiyonel)
 3. **Arama**: Üst kısımdaki arama kutusunu kullanın
 4. **Filtreleme**: Banka dropdown'ından filtreleme yapın
@@ -60,8 +61,9 @@ Güvenli IBAN yönetimi uygulaması. Kullanıcılar kendi veya başkalarına ait
 - **Lucide React**: Modern icon set
 - **CryptoJS**: AES şifreleme
 - **QRCode.react**: QR kod oluşturma
-- **IBAN**: IBAN doğrulama
+- **IBAN**: IBAN doğrulama ve formatlama
 - **React Hot Toast**: Bildirimler
+- **Türk Banka Kodları**: 19+ banka için otomatik IBAN tanıma
 
 ## Güvenlik
 
