@@ -9,7 +9,7 @@ function SearchAndFilter({
   turkishBanks 
 }) {
   return (
-    <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-slate-700/50 p-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8 mobile-search-filter overflow-hidden w-full mt-6 md:mt-14">
+    <div className="bg-white/80 shadow-lg dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-slate-700/50 p-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8 mobile-search-filter overflow-hidden w-full mt-6 md:mt-14">
       <div className="flex flex-col gap-3 sm:gap-4 md:gap-6 lg:flex-row">
         <div className="flex-1 relative">
           <input
