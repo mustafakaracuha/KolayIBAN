@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { 
   Shield, 
   Zap, 
@@ -27,10 +28,30 @@ import {
   Target,
   BarChart3,
   Users2,
-  Building2
+  Building2,
+  ArrowUp
 } from 'lucide-react';
 
 function AboutPage() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Scroll event listener
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700">
       {/* Hero Section */}
@@ -102,10 +123,9 @@ function AboutPage() {
             <div className="text-center mb-8 sm:mb-12">
               <Link 
                 to="/home" 
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white px-8 py-4 rounded-2xl font-bold text-lg sm:text-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 group"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transition-all duration-200"
               >
                 İlk IBAN'ını Ekle
-                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
               </Link>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-3">
                 Ücretsiz başlayın • Kayıt gerekmez • Hemen kullanın
@@ -308,7 +328,16 @@ function AboutPage() {
         </div>
       </div>
 
-
+      {/* Yukarı Çık Butonu */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group"
+          title="Yukarı Çık"
+        >
+          <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
+        </button>
+      )}
 
       {/* Footer */}
       <div className="py-16 bg-gray-900 text-white relative">

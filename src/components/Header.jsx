@@ -22,7 +22,7 @@ function Header() {
               <h1 className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 IBAN Kasa
               </h1>
-              <p className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+              <p className="text-sm text-gray-600/60 dark:text-gray-400/70 font-medium">
                 IBAN'larınızı kolayca yönetin
               </p>
             </div>
