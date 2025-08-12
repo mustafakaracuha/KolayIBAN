@@ -62,13 +62,19 @@ button, input, select, .card-modern {
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto; /* mobilde scroll kilitlenmesin */
 }
 
 body {
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto; /* mobilde scroll kilitlenmesin */
   scroll-behavior: smooth;
+}
+
+/* iOS/Safari için momentum scroll ve overscroll kontrolü */
+.overflow-y-auto {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 /* Prevent horizontal scroll */

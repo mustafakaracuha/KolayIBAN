@@ -185,7 +185,7 @@ function App() {
     setConfirmModal({
       isOpen: true,
       title: "IBAN Sil",
-      message: `"${ibanToDelete?.name}" IBAN'ını silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.`,
+      message: `"${ibanToDelete?.name}" IBAN'ını silmek istediğinizden emin misiniz?`,
       confirmText: "Sil",
       cancelText: "İptal",
       type: "danger",
