@@ -3,7 +3,7 @@ import { Shield, Github, Twitter, Linkedin, Mail } from "lucide-react";
 function Header() {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-transparent">
-      <div className="w-full md:max-w-3xl mx-0 sm:mx-0 md:mx-auto bg-gradient-primary rounded-none md:rounded-br-3xl md:rounded-bl-3xl shadow-modern overflow-hidden px-3 sm:px-4 md:px-4 py-3 sm:py-4 md:py-6 mobile-header">
+      <div className="w-full md:max-w-4xl mx-0 sm:mx-0 md:mx-auto bg-gradient-primary rounded-none md:rounded-br-3xl md:rounded-bl-3xl shadow-modern overflow-hidden px-3 sm:px-4 md:px-4 py-3 sm:py-4 md:py-6 mobile-header">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3 md:gap-4">
             <div className="p-2 md:p-3 bg-white/20 rounded-xl md:rounded-2xl backdrop-blur-sm">
