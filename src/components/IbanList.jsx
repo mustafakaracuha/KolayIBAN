@@ -25,7 +25,7 @@ function IbanList({
         {/* IBAN'larım Başlığı */}
         <div className="flex items-center gap-3 mb-6">
           <div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-100">
               IBAN'larım
             </h2>
             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1">
@@ -69,7 +69,7 @@ function IbanList({
       {/* IBAN'larım Başlığı */}
       <div className="flex items-center gap-3 mb-6">
         <div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100">
+          <h2 className="text-xl sm:text-2xl md:text-2xl font-bold text-gray-800 dark:text-gray-100">
             IBAN'larım
           </h2>
           <p className="text-sm sm:text-base text-gray-500/70 dark:text-gray-400/70 mt-1">
