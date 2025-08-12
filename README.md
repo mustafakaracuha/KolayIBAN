@@ -34,7 +34,7 @@ Güvenli IBAN yönetimi uygulaması. Kullanıcılar kendi veya başkalarına ait
 
 ![Ana Sayfa](public/screenshots/home.png)
 
-<!-- ![IBAN Ekleme Modalı](public/screenshots/add-iban.png) -->
+![IBAN Ekleme Modalı](public/screenshots/add-iban.png)
 
 ![Arama ve Filtreleme](public/screenshots/search-filter.png)
 
