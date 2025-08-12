@@ -9,6 +9,7 @@ import AddIbanModal from "./components/AddIbanModal";
 import ConfirmModal from "./components/ConfirmModal";
 import FloatingAddButton from "./components/FloatingAddButton";
 import ScrollToTop from "./components/ScrollToTop";
+import Footer from "./components/Footer";
 
 // Utils
 import {
@@ -287,6 +288,7 @@ function App() {
       />
       
       <ScrollToTop />
+      <Footer />
       <FloatingAddButton onClick={() => setShowForm(true)} />
     </div>
   );

@@ -12,7 +12,7 @@ import {
 function Header({}) {
   return (
     <div className="bg-gradient-primary shadow-modern overflow-hidden fixed top-0 left-0 right-0 z-50">
-      <div className="w-full px-3 sm:px-4 md:max-w-3xl md:mx-auto md:px-4 py-3 sm:py-4 md:py-6 mobile-header">
+      <div className="w-full px-3 sm:px-4 md:max-w-4xl lg:max-w-5xl md:mx-auto md:px-4 py-3 sm:py-4 md:py-6 mobile-header">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3 md:gap-4">
             <div className="p-2 md:p-3 bg-white/20 rounded-xl md:rounded-2xl backdrop-blur-sm">
@@ -28,11 +28,11 @@ function Header({}) {
             </div>
           </div>
 
-          {/* Sağ taraf - Sosyal medya ve geliştirici */}
-          <div className="flex flex-col items-end gap-1">
-            {/* Geliştirici adı (sadece desktop'ta) */}
-            <div className="text-xs text-white/70">
-              <span className="font-medium">Mustafa Karaçuha</span>
+          {/* Sağ taraf - Sosyal medya ve geliştirici (sadece desktop) */}
+          <div className="hidden md:flex flex-col items-end gap-1">
+            {/* Geliştirici */}
+            <div className="text-xs text-white/80">
+              <span className="font-medium">by Mustafa Karaçuha</span>
             </div>
             <div className="flex items-center justify-end gap-1 md:gap-2">
               <a
@@ -69,6 +69,26 @@ function Header({}) {
               >
                 <Mail className="w-3 h-3 md:w-4 md:h-4" />
               </a>
+            </div>
+            {/* Kaynak ve geri bildirim linkleri */}
+            <div className="hidden md:flex items-center justify-end gap-3 text-[11px] text-white/80 mt-1">
+              <a
+                href="https://github.com/mustafakaracuha/iban-kasa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Kaynak Kodu
+              </a>
+              <span className="opacity-50">•</span>
+              <a href="mailto:karacuhaa58@gmail.com" className="hover:underline">Geri Bildirim</a>
+            </div>
+            <div className="text-[11px] text-white/70 mt-1 flex items-center gap-2">
+              <span>© 2025 IBAN Kasa</span>
+              <span className="opacity-50">•</span>
+              <span>Veriler cihazınızda saklanır</span>
+              <span className="opacity-50">•</span>
+              <span>Made with ❤️</span>
             </div>
           </div>
         </div>
