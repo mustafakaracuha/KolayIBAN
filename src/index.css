@@ -72,7 +72,7 @@ body {
 }
 
 /* iOS/Safari için momentum scroll ve overscroll kontrolü */
-.overflow-y-auto {
+.scrollable, .overflow-y-auto, body, html {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
 }

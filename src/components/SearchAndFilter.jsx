@@ -9,7 +9,7 @@ function SearchAndFilter({
   turkishBanks 
 }) {
   return (
-    <div className="card-modern p-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8 mobile-search-filter overflow-hidden w-full">
+    <div className="card-modern p-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8 mobile-search-filter overflow-hidden w-full mt-5">
       <div className="flex flex-col gap-3 sm:gap-4 md:gap-6 lg:flex-row">
         <div className="flex-1 relative">
           <input
