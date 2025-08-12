@@ -222,7 +222,7 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 flex flex-col">
       <Toaster position="top-center" />
 
-      <Header onAboutClick={() => setShowAbout(true)} />
+      <Header />
 
       {/* Header sabit olduğu için üstten boşluk bırak */}
       <div className="w-full px-4 sm:px-5 md:max-w-3xl md:mx-auto pt-24 sm:pt-28 pb-3 sm:pb-6 flex-1 bg-transparent">

@@ -1,15 +1,6 @@
-import {
-  Lock,
-  Unlock,
-  Shield,
-  CreditCard,
-  Github,
-  Twitter,
-  Linkedin,
-  Mail,
-} from "lucide-react";
+import { Shield, Github, Twitter, Linkedin, Mail } from "lucide-react";
 
-function Header({}) {
+function Header() {
   return (
     <div className="bg-gradient-primary shadow-modern overflow-hidden fixed top-0 left-0 right-0 z-50">
       <div className="w-full px-3 sm:px-4 md:max-w-4xl lg:max-w-5xl md:mx-auto md:px-4 py-3 sm:py-4 md:py-6 mobile-header">
@@ -27,6 +18,9 @@ function Header({}) {
               </p>
             </div>
           </div>
+
+          {/* Mobil sağ alan boş bırakıldı */}
+          <div className="flex md:hidden items-center gap-2" />
 
           {/* Sağ taraf - Sosyal medya ve geliştirici (sadece desktop) */}
           <div className="hidden md:flex flex-col items-end gap-1">
