@@ -27,10 +27,10 @@
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js?v=3')
             .then((registration) => {
-              console.log('SW registered: ', registration);
+              // console.log('SW registered: ', registration);
             })
             .catch((registrationError) => {
-              console.log('SW registration failed: ', registrationError);
+              // console.log('SW registration failed: ', registrationError);
             });
         });
       }
