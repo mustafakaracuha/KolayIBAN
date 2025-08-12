@@ -1,4 +1,5 @@
 import { X, User, CreditCard, Building, FileText, Tags } from 'lucide-react'
+import { getBankFromIBAN } from '../utils/ibanUtils';
 
 function AddIbanModal({ 
   showForm, 
@@ -67,7 +68,15 @@ function AddIbanModal({
                 value={formData.iban}
                 onChange={(e) => {
                   const value = e.target.value.toUpperCase()
-                  setFormData({...formData, iban: value})
+                  
+                  // IBAN'dan banka adını otomatik çıkar
+                  const detectedBank = getBankFromIBAN(value)
+                  
+                  setFormData({
+                    ...formData, 
+                    iban: value,
+                    bankName: detectedBank || ""
+                  })
                 }}
                 className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-slate-700 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                 placeholder="TR00 0000 0000 0000 0000 0000 00"
@@ -75,22 +84,23 @@ function AddIbanModal({
               />
             </div>
 
-            {/* Banka Seçimi */}
+            {/* Banka Adı (Otomatik Tespit) */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2 flex items-center gap-2">
                 <Building className="w-4 h-4 text-purple-600" />
                 Banka Adı
               </label>
-              <select
-                value={formData.bankName}
-                onChange={(e) => setFormData({...formData, bankName: e.target.value})}
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-slate-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-              >
-                <option value="">Banka seçin</option>
-                {turkishBanks.map(bank => (
-                  <option key={bank} value={bank}>{bank}</option>
-                ))}
-              </select>
+              <div className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-slate-700 text-gray-900 dark:text-white">
+                {formData.bankName ? (
+                  <div className="flex items-center gap-2">
+                    <span className="text-green-600 dark:text-green-400">✓</span>
+                    <span className="font-medium">{formData.bankName}</span>
+                    <span className="text-xs text-gray-500">(Otomatik tespit edildi)</span>
+                  </div>
+                ) : (
+                  <span className="text-gray-500">IBAN girin, banka otomatik tespit edilecek</span>
+                )}
+              </div>
             </div>
             
             {/* Açıklama */}
