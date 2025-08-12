@@ -250,9 +250,9 @@ button:focus, input:focus, select:focus {
 
   /* Mobile IBAN cards */
   .mobile-iban-card {
-    padding: 1rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+    padding: 1rem 1.125rem; /* yatayda nefes alanı */
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   .mobile-iban-card h3 {
@@ -261,7 +261,7 @@ button:focus, input:focus, select:focus {
 
   .mobile-iban-card .iban-number {
     font-size: 0.875rem;
-    word-break: break-all;
+    word-break: break-word;
   }
 
   /* Mobile action buttons */

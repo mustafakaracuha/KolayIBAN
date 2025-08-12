@@ -223,7 +223,7 @@ function App() {
 
       <Header onAboutClick={() => setShowAbout(true)} />
 
-      <div className="w-full px-8 sm:px-4 md:max-w-3xl md:mx-auto py-4 sm:py-8 overflow-y-auto flex-1 bg-transparent">
+      <div className="w-full px-4 sm:px-5 md:max-w-3xl md:mx-auto py-3 sm:py-6 overflow-y-auto flex-1 bg-transparent">
         <SearchAndFilter
           searchTerm={searchTerm}
           setSearchTerm={setSearchTerm}
