@@ -1,26 +1,26 @@
 // Banka logoları mapping
 export const bankLogos = {
   // Büyük Bankalar
-  "Ziraat Bankası": "/bank-logos/ziraat.png",
-  "İş Bankası": "/bank-logos/isbank.png",
-  "Garanti BBVA": "/bank-logos/garanti.png",
-  "Akbank": "/bank-logos/akbank.png",
-  "Yapı Kredi": "/bank-logos/yapikredi.png",
-  "VakıfBank": "/bank-logos/vakifbank.png",
-  "Halkbank": "/bank-logos/halkbank.png",
-  "Denizbank": "/bank-logos/denizbank.png",
-  "QNB Finansbank": "/bank-logos/qnb.png",
-  "ING Bank": "/bank-logos/ing.png",
-  "HSBC": "/bank-logos/hsbc.png",
-  "TEB": "/bank-logos/teb.png",
-  "Şekerbank": "/bank-logos/sekerbank.png",
-  "Türkiye Finans": "/bank-logos/turkiyefinans.png",
-  "Albaraka Türk": "/bank-logos/albaraka.png",
-  "Kuveyt Türk": "/bank-logos/kuveytturk.png",
-  "Vakıf Katılım": "/bank-logos/vakifkatilim.png",
-  "Ziraat Katılım": "/bank-logos/ziraatkatilim.png",
-  "İş Katılım": "/bank-logos/iskatilim.png",
-  "Türkiye Emlak Katılım": "/bank-logos/emlakkatilim.png"
+  "Ziraat Bankası": "/bank-logos/ziraat.png?v=1",
+  "İş Bankası": "/bank-logos/isbank.png?v=1",
+  "Garanti BBVA": "/bank-logos/garanti.png?v=1",
+  "Akbank": "/bank-logos/akbank.png?v=1",
+  "Yapı Kredi": "/bank-logos/yapikredi.png?v=1",
+  "VakıfBank": "/bank-logos/vakifbank.png?v=1",
+  "Halkbank": "/bank-logos/halkbank.png?v=1",
+  "Denizbank": "/bank-logos/denizbank.png?v=1",
+  "QNB Finansbank": "/bank-logos/qnb.png?v=1",
+  "ING Bank": "/bank-logos/ing.png?v=1",
+  "HSBC": "/bank-logos/hsbc.png?v=1",
+  "TEB": "/bank-logos/teb.png?v=1",
+  "Şekerbank": "/bank-logos/sekerbank.png?v=1",
+  "Türkiye Finans": "/bank-logos/turkiyefinans.png?v=1",
+  "Albaraka Türk": "/bank-logos/albaraka.png?v=1",
+  "Kuveyt Türk": "/bank-logos/kuveytturk.png?v=1",
+  "Vakıf Katılım": "/bank-logos/vakifkatilim.png?v=1",
+  "Ziraat Katılım": "/bank-logos/ziraatkatilim.png?v=1",
+  "İş Katılım": "/bank-logos/iskatilim.png?v=1",
+  "Türkiye Emlak Katılım": "/bank-logos/emlakkatilim.png?v=1"
 };
 
 // Banka logosu getir
