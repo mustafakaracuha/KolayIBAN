@@ -34,25 +34,30 @@ function IbanList({
           </div>
         </div>
         
-        <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm border border-gray-200 dark:border-gray-600 rounded-2xl p-16 text-center">
+        <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm border border-gray-200 dark:border-gray-600 rounded-2xl p-8 md:p-16 text-center">
           <div className="text-gray-400 mb-6">
             {ibans.length === 0 ? (
               <div>
-                <CreditCard className="w-24 h-24 mx-auto mb-4" />
+                <CreditCard className="w-16 h-16 md:w-24 md:h-24 mx-auto mb-4" />
               </div>
             ) : (
-              <Search className="w-24 h-24 mx-auto mb-4" />
+              <Search className="w-16 h-16 md:w-24 md:h-24 mx-auto mb-4" />
             )}
           </div>
-          <h3 className="text-2xl font-bold text-gray-700 dark:text-gray-200 mb-4">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-700 dark:text-gray-200 mb-2 md:mb-4">
             {ibans.length === 0
               ? "Henüz IBAN kaydedilmedi"
               : "Arama sonucu bulunamadı"}
           </h3>
-          <p className="text-gray-500 dark:text-gray-400 text-lg max-w-md mx-auto leading-relaxed">
-            {ibans.length === 0
-              ? 'İlk IBAN\'ınızı eklemek için yukarıdaki "IBAN Ekle" butonuna tıklayın.'
-              : "Farklı arama terimleri deneyin veya filtreleri temizleyin."}
+          <p className="text-gray-500 dark:text-gray-400 text-sm sm:text-base md:text-lg max-w-md mx-auto leading-relaxed">
+            {ibans.length === 0 ? (
+              <span>
+                <span className="md:hidden">İlk IBAN'ınızı eklemek için alttaki <span className="font-semibold">+</span> butonuna tıklayınız.</span>
+                <span className="hidden md:inline">İlk IBAN'ınızı eklemek için yukarıdaki "IBAN Ekle" butonuna tıklayın.</span>
+              </span>
+            ) : (
+              "Farklı arama terimleri deneyin veya filtreleri temizleyin."
+            )}
           </p>
         </div>
       </div>
