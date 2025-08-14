@@ -3,3 +3,10 @@
 /*.css /assets/:splat.css 200
 /*.mjs /assets/:splat.mjs 200
 /* /index.html 200
+
+# Cache headers for assets
+/assets/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.css
+  Cache-Control: public, max-age=31536000, immutable
