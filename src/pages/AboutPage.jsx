@@ -39,197 +39,181 @@ function AboutPage() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-800">
       {/* Hero Section */}
-      <section className="pt-10 pb-12 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800">
-        <div className="max-w-4xl mx-auto px-6 lg:px-20 ">
-          <div className="flex items-start gap-4 md:gap-8">
-            {/* App Logo */}
-            <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-2xl md:rounded-3xl flex items-center justify-center shadow-2xl transform hover:scale-105 transition-transform duration-300 flex-shrink-0">
-              <Shield className="w-8 h-8 md:w-12 md:h-12 text-white" />
-            </div>
-
+      <section className="pt-10 pb-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800">
+        <div className="max-w-4xl mx-auto px-6 lg:px-20">
+          <div className="flex items-start gap-4 md:gap-8 mb-16">
             {/* Content */}
             <div className="flex-1">
-              <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-3 md:mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-3 md:mb-4">
                 KolayIBAN
               </h1>
-              <p className="text-sm md:text-md lg:text-xl text-gray-500 dark:text-gray-300 leading-relaxed mb-4 md:mb-6">
+              <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-4 md:mb-6">
                 IBAN'larınızı güvenli ve kullanışlı bir şekilde yönetin. 
               </p>
               
               <div className="flex flex-col items-start gap-4">
-                <div className="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span>Güvenli</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span>Ücretsiz</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span>Hızlı</span>
-                  </div>
-                </div>
+              
                 <Link
                   to="/home"
-                  className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-normal text-base transition-colors underline flex items-center gap-2"
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-semibold text-base transition-colors flex items-center gap-2"
                 >
                   İlk IBAN'ını Ekle
                   <span className="text-lg">→</span>
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* What is it Section */}
-      <section className="py-12 border-t border-gray-200 dark:border-gray-700">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-2xl font-normal text-gray-900 dark:text-gray-100 mb-6">
-            Ne İşe Yarar?
-          </h2>
-          <div className="space-y-4 text-base text-gray-600 dark:text-gray-400 leading-relaxed">
-            <p>
-              KolayIBAN, sık kullandığınız IBAN'ları güvenli bir şekilde
-              saklamanızı ve hızlıca erişmenizi sağlar. Aile üyeleri,
-              arkadaşlar, iş ortakları veya herhangi bir kişinin IBAN'ını
-              kaydedebilir, kategorilere ayırabilir ve ihtiyaç duyduğunuzda
-              anında bulabilirsiniz.
-            </p>
-            <p>
-              Uygulama tamamen ücretsizdir, kayıt gerektirmez ve verileriniz
-              sadece cihazınızda saklanır. AES-256 şifreleme ile korunan
-              verileriniz hiçbir zaman buluta gönderilmez.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* How to Use Section */}
-      <section className="py-12 border-t border-gray-200 dark:border-gray-700">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-2xl font-normal text-gray-900 dark:text-gray-100 mb-8">
-            Nasıl Kullanılır?
-          </h2>
-
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-lg font-normal text-gray-900 dark:text-gray-100 mb-3">
-                1. IBAN Ekleme
-              </h3>
-              <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed">
-                "Yeni IBAN Ekle" butonuna tıklayın ve IBAN bilgilerini girin.
-                Sistem otomatik olarak banka adını tespit eder ve IBAN formatını
-                düzenler. İsim, açıklama ve etiketler ekleyerek IBAN'ınızı
-                kategorilere ayırabilirsiniz.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-normal text-gray-900 dark:text-gray-100 mb-3">
-                2. Arama ve Filtreleme
-              </h3>
-              <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed">
-                Arama kutusuna isim, açıklama veya etiket yazarak IBAN'larınızı
-                bulabilirsiniz. Banka filtreleme özelliği ile belirli bir
-                bankanın IBAN'larını listeleyebilirsiniz.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-normal text-gray-900 dark:text-gray-100 mb-3">
-                3. Kopyalama ve Paylaşım
-              </h3>
-              <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed">
-                IBAN'ları tek tıkla kopyalayabilir, QR kod oluşturabilirsiniz.
-                QR kodları mobil bankacılık uygulamalarında kolayca
-                tarayabilirsiniz. IBAN'ları gizleyebilir ve gerektiğinde tekrar
-                görünür yapabilirsiniz.
-              </p>
+            {/* App Logo */}
+            <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-2xl md:rounded-3xl flex items-center justify-center shadow-2xl transform hover:scale-105 transition-transform duration-300 flex-shrink-0">
+              <Shield className="w-8 h-8 md:w-12 md:h-12 text-white" />
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-12 border-t border-gray-200 dark:border-gray-700">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-2xl font-normal text-gray-900 dark:text-gray-100 mb-8">
-            Özellikler
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex items-start gap-3">
-              <Lock className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
-              <div>
-                <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
-                  Güvenli Saklama
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  AES-256 şifreleme ile verileriniz korunur
+          {/* Content Sections */}
+          <div className="space-y-16">
+            {/* What is it Section */}
+            <div>
+              <h2 className="text-2xl font-normal text-gray-900 dark:text-gray-100 mb-6">
+                Ne İşe Yarar?
+              </h2>
+              <div className="space-y-4 text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p>
+                  KolayIBAN, sık kullandığınız IBAN'ları güvenli bir şekilde
+                  saklamanızı ve hızlıca erişmenizi sağlar. Aile üyeleri,
+                  arkadaşlar, iş ortakları veya herhangi bir kişinin IBAN'ını
+                  kaydedebilir, kategorilere ayırabilir ve ihtiyaç duyduğunuzda
+                  anında bulabilirsiniz.
+                </p>
+                <p>
+                  Uygulama tamamen ücretsizdir, kayıt gerektirmez ve verileriniz
+                  sadece cihazınızda saklanır. AES-256 şifreleme ile korunan
+                  verileriniz hiçbir zaman buluta gönderilmez.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-3">
-              <Zap className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
-              <div>
-                <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
-                  Hızlı Erişim
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Saniyeler içinde IBAN'larınıza erişin
-                </p>
+            {/* How to Use Section */}
+            <div>
+              <h2 className="text-2xl font-normal text-gray-900 dark:text-gray-100 mb-8">
+                Nasıl Kullanılır?
+              </h2>
+
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-lg font-normal text-gray-900 dark:text-gray-100 mb-3">
+                    1. IBAN Ekleme
+                  </h3>
+                  <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed">
+                    "Yeni IBAN Ekle" butonuna tıklayın ve IBAN bilgilerini girin.
+                    Sistem otomatik olarak banka adını tespit eder ve IBAN formatını
+                    düzenler. İsim, açıklama ve etiketler ekleyerek IBAN'ınızı
+                    kategorilere ayırabilirsiniz.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-normal text-gray-900 dark:text-gray-100 mb-3">
+                    2. Arama ve Filtreleme
+                  </h3>
+                  <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed">
+                    Arama kutusuna isim, açıklama veya etiket yazarak IBAN'larınızı
+                    bulabilirsiniz. Banka filtreleme özelliği ile belirli bir
+                    bankanın IBAN'larını listeleyebilirsiniz.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-normal text-gray-900 dark:text-gray-100 mb-3">
+                    3. Kopyalama ve Paylaşım
+                  </h3>
+                  <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed">
+                    IBAN'ları tek tıkla kopyalayabilir, QR kod oluşturabilirsiniz.
+                    QR kodları mobil bankacılık uygulamalarında kolayca
+                    tarayabilirsiniz. IBAN'ları gizleyebilir ve gerektiğinde tekrar
+                    görünür yapabilirsiniz.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="flex items-start gap-3">
-              <Search className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
-              <div>
-                <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
-                  Akıllı Arama
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  İsim, açıklama ve etiketlerde arama
-                </p>
-              </div>
-            </div>
+            {/* Features Section */}
+            <div>
+              <h2 className="text-2xl font-normal text-gray-900 dark:text-gray-100 mb-8">
+                Özellikler
+              </h2>
 
-            <div className="flex items-start gap-3">
-              <QrCode className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
-              <div>
-                <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
-                  QR Kod
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Otomatik QR kod oluşturma
-                </p>
-              </div>
-            </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-start gap-3">
+                  <Lock className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
+                      Güvenli Saklama
+                    </h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      AES-256 şifreleme ile verileriniz korunur
+                    </p>
+                  </div>
+                </div>
 
-            <div className="flex items-start gap-3">
-              <Smartphone className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
-              <div>
-                <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
-                  Mobil Uyumlu
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  PWA desteği ile ana ekrana ekleyin
-                </p>
-              </div>
-            </div>
+                <div className="flex items-start gap-3">
+                  <Zap className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
+                      Hızlı Erişim
+                    </h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      Saniyeler içinde IBAN'larınıza erişin
+                    </p>
+                  </div>
+                </div>
 
-            <div className="flex items-start gap-3">
-              <Globe className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
-              <div>
-                <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
-                  Offline Çalışma
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  İnternet olmadan da kullanın
-                </p>
+                <div className="flex items-start gap-3">
+                  <Search className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
+                      Akıllı Arama
+                    </h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      İsim, açıklama ve etiketlerde arama
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <QrCode className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
+                      QR Kod
+                    </h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      Otomatik QR kod oluşturma
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Smartphone className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
+                      Mobil Uyumlu
+                    </h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      PWA desteği ile ana ekrana ekleyin
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Globe className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
+                      Offline Çalışma
+                    </h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      İnternet olmadan da kullanın
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -249,59 +233,133 @@ function AboutPage() {
       )}
 
       {/* Footer */}
-      <footer className="py-12 border-t border-gray-200 dark:border-gray-700">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="mb-6">
-            <h3 className="text-lg font-normal text-gray-900 dark:text-gray-100 mb-2">
-              KolayIBAN
-            </h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              IBAN'larınızı güvenli ve kullanışlı bir şekilde yönetmek için
-              tasarlanmış modern web uygulaması.
-            </p>
+      <footer className="bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          {/* Main Footer Content */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {/* Brand Section */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                    KolayIBAN
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    IBAN'larınızı kolayca yönetin.
+                  </p>
+                </div>
+              </div>
+             
+            </div>
+
+            {/* Quick Links */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                Hızlı Bağlantılar
+              </h4>
+              <div className="space-y-2">
+                <Link
+                  to="/home"
+                  className="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                  IBAN'larım
+                </Link>
+                <Link
+                  to="/"
+                  className="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                  Hakkında
+                </Link>
+                <a
+                  href="https://github.com/mustafakaracuha/KolayIban"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+
+            {/* Features */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                Özellikler
+              </h4>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>AES-256 Şifreleme</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span>PWA Desteği</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                  <span>Offline Çalışma</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <span>QR Kod Oluşturma</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6">
-            <Heart className="w-4 h-4 text-red-500" />
-            <span className="text-sm text-gray-500 dark:text-gray-400 font-normal italic">Made with love by Mustafa Karaçuha</span>
+          {/* Social Links & Made with Love */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 py-8 border-t border-gray-200 dark:border-gray-700">
+            <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+              <Heart className="w-4 h-4 text-red-500 animate-pulse" />
+              <span className="font-medium">Made with love by</span>
+              <span className="text-blue-600 dark:text-blue-400 font-semibold">Mustafa Karaçuha</span>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <a
+                href="https://github.com/mustafakaracuha/KolayIban"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-white dark:hover:bg-slate-800 rounded-lg transition-all duration-200"
+                title="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="https://twitter.com/muskaracuha"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-white dark:hover:bg-slate-800 rounded-lg transition-all duration-200"
+                title="Twitter"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a
+                href="https://linkedin.com/in/mustafakaracuha"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-white dark:hover:bg-slate-800 rounded-lg transition-all duration-200"
+                title="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:karacuhaa58@gmail.com"
+                className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-white dark:hover:bg-slate-800 rounded-lg transition-all duration-200"
+                title="Email"
+              >
+                <Mail className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
-          <div className="flex space-x-4">
-            <a
-              href="https://github.com/mustafakaracuha/KolayIban"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
-            >
-              <Github className="w-5 h-5" />
-            </a>
-            <a
-              href="https://twitter.com/muskaracuha"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
-            >
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a
-              href="https://linkedin.com/in/mustafakaracuha"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a
-              href="mailto:karacuhaa58@gmail.com"
-              className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
-            >
-              <Mail className="w-5 h-5" />
-            </a>
-          </div>
-
-          <div className="border-t border-gray-200 dark:border-gray-700 mt-8 pt-6">
+          {/* Copyright */}
+          <div className="text-center pt-6 border-t border-gray-200 dark:border-gray-700">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              © 2025 KolayIBAN. Tüm hakları saklıdır.
+              © 2025 <span className="font-semibold text-blue-600 dark:text-blue-400">KolayIBAN</span>. Tüm hakları saklıdır.
             </p>
           </div>
         </div>
