@@ -56,7 +56,7 @@ Güvenli IBAN yönetimi uygulaması. Kullanıcılar kendi veya başkalarına ait
 
 ![IBAN Ekleme Modalı](public/screenshots/add-iban.png)
 
-![Arama ve Filtreleme](public/screenshots/search-filter.png)
+![Hakkında](public/screenshots/about.png)
 
 ![QR Kod Görünümü](public/screenshots/qr.png)
 
