@@ -71,7 +71,7 @@ function AnimatedRoutes() {
               <PageTransition>
                 <AboutPage />
               </PageTransition>
-            } 
+            }
           />
           <Route 
             path="/home" 

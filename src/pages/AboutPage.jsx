@@ -39,30 +39,46 @@ function AboutPage() {
   return (
     <main className="min-h-screen bg-white dark:bg-slate-900">
       {/* Hero Section */}
-      <section className="pt-12 pb-8">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="mb-12">
+      <section className="pt-16 pb-12 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
             {/* App Logo */}
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg">
-              <Shield className="w-8 h-8 text-white" />
+            <div className="w-20 h-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-3xl flex items-center justify-center mb-8 shadow-2xl mx-auto transform hover:scale-105 transition-transform duration-300">
+              <Shield className="w-10 h-10 text-white" />
             </div>
 
-            <h1 className="text-3xl font-normal text-gray-900 dark:text-gray-100 mb-6">
-              KolayIBAN Nedir?
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              KolayIBAN
             </h1>
-            <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
-              KolayIBAN, IBAN'larınızı güvenli ve kullanışlı bir şekilde
-              yönetmenizi sağlayan modern bir web uygulamasıdır. Artık IBAN'ları
-              not defterinde aramaya gerek yok.
+            <p className="text-md md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto mb-8">
+              IBAN'larınızı güvenli ve kullanışlı bir şekilde yönetin. 
+              <span className="font-semibold text-blue-600 dark:text-blue-400">Artık IBAN'ları not defterinde aramaya gerek yok.</span>
             </p>
-            <div className="mb-8 mt-8">
-            <Link
-              to="/home"
-              className="text-blue-600 italic dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-normal text-base transition-colors underline"
-            >
-              Hemen Başlayın →
-            </Link>
-          </div>
+            
+            <div className="flex flex-col items-center gap-6">
+              <Link
+                to="/home"
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2"
+              >
+                İlk IBAN'ınını Ekle
+                <span className="text-xl">→</span>
+              </Link>
+              
+              <div className="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Güvenli</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span>Ücretsiz</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                  <span>Hızlı</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
