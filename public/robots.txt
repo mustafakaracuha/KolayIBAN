@@ -1,31 +1,6 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://kolay-iban.vercel.app/sitemap.xml
 
-# Crawl-delay
 Crawl-delay: 1
-
-# Allow important pages
-Allow: /
-Allow: /home
-Allow: /about
-
-# Allow all assets
-Allow: /favicon.svg
-Allow: /manifest.json
-Allow: /screenshots/
-Allow: /bank-logos/
-
-# Google specific
-User-agent: Googlebot
-Allow: /
-
-# Bing specific
-User-agent: Bingbot
-Allow: /
-
-# Yandex specific
-User-agent: Yandex
-Allow: /
