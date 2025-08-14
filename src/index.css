@@ -76,6 +76,14 @@
   box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
 }
 
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-3xl {
+  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.4);
+}
+
 /* Yumuşak geçişler - sadece belirli elemanlar için */
 button, input, select, .card-modern {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -178,22 +186,73 @@ button:focus, input:focus, select:focus {
 
 /* Modern buton stili */
 .btn-modern {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
   border: none;
-  border-radius: 10px;
-  padding: 12px 24px;
+  border-radius: 16px;
+  padding: 16px 32px;
   color: white;
   font-weight: 600;
-  transition: all 0.3s ease;
+  font-size: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
 }
 
 .btn-modern:hover {
-  transform: translateY(-2px);
-  /* box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4); */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.btn-modern:hover::before {
+  left: 100%;
 }
 
 .btn-modern:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+}
+
+/* Dark mode buton stilleri */
+.dark .btn-modern {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  box-shadow: 0 4px 14px rgba(96, 165, 250, 0.25);
+}
+
+.dark .btn-modern:hover {
+  box-shadow: 0 8px 25px rgba(96, 165, 250, 0.4);
+}
+
+/* Animasyon stilleri */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: slideInFromTop 0.3s ease-out;
+}
+
+.slide-in-from-top-2 {
+  animation: slideInFromTop 0.3s ease-out;
 }
 
 /* Modern kart stili */
@@ -228,18 +287,44 @@ button:focus, input:focus, select:focus {
 
 /* Modern input stili */
 .input-modern {
-  background: rgba(249, 249, 249, 0.9);
-  border: 2px solid transparent;
-  border-radius: 12px;
-  padding: 12px 16px;
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 16px 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
+  font-size: 16px;
+  color: #374151;
+  outline: none;
 }
 
 .input-modern:focus {
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
   background: rgba(255, 255, 255, 1);
+  transform: translateY(-1px);
+}
+
+.input-modern:hover {
+  border-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+/* Dark mode input stilleri */
+.dark .input-modern {
+  background: rgba(51, 65, 85, 0.8);
+  border-color: #475569;
+  color: #f1f5f9;
+}
+
+.dark .input-modern:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.1);
+  background: rgba(51, 65, 85, 0.95);
+}
+
+.dark .input-modern:hover {
+  border-color: #64748b;
 }
 
 /* Mobilde optimize ediyoruz */
