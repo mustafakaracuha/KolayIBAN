@@ -81,7 +81,7 @@ function SearchAndFilter({
       <div className="text-center hidden md:block">
         <button
           onClick={onAddIban}
-          className="!cursor-pointer flex items-center justify-center gap-3 px-8 py-4 text-lg font-semibold whitespace-nowrap touch-friendly rounded-xl shadow-2xl transition-all duration-300 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 dark:from-slate-700 dark:to-slate-800 dark:hover:from-slate-800 dark:hover:to-slate-900 text-white border-2 border-blue-500 hover:border-blue-400 dark:border-slate-600 dark:hover:border-slate-500 w-full transform "
+          className="!cursor-pointer flex items-center justify-center gap-3 px-8 py-4 text-lg font-semibold whitespace-nowrap touch-friendly rounded-xl shadow-2xl transition-all duration-300 bg-gradient-primary dark:from-slate-700 dark:to-slate-800 dark:hover:from-slate-800 dark:hover:to-slate-900 text-white border-2 dark:border-slate-600 dark:hover:border-slate-500 w-full transform "
         >
           <Plus className="w-6 h-6" />
           <span>Yeni IBAN Ekle</span>

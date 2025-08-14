@@ -55,8 +55,6 @@ A secure IBAN management application. Users can safely store and quickly access 
 
 ![Add IBAN Modal](public/screenshots/add-iban.png)
 
-![About Page](public/screenshots/about.png)
-
 ![QR Code View](public/screenshots/qr.png)
 
 ## Usage
