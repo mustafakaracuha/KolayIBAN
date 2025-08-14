@@ -58,7 +58,7 @@ function AboutPage() {
             <div className="mb-8 mt-8">
             <Link
               to="/home"
-              className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-normal text-base transition-colors underline"
+              className="text-blue-600 italic dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-normal text-base transition-colors underline"
             >
               Hemen Başlayın →
             </Link>
