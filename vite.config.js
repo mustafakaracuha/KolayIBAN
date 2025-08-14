@@ -29,5 +29,8 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['react', 'react-dom']
+  },
+  define: {
+    'process.env.NODE_ENV': '"production"'
   }
 })
