@@ -50,7 +50,7 @@ function AboutPage() {
             <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               KolayIBAN
             </h1>
-            <p className="text-md md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mb-8">
+            <p className="text-md md:text-xl text-gray-500 dark:text-gray-300 leading-relaxed max-w-2xl mb-8">
               IBAN'larınızı güvenli ve kullanışlı bir şekilde yönetin. 
             </p>
             
@@ -117,7 +117,7 @@ function AboutPage() {
               <h3 className="text-lg font-normal text-gray-900 dark:text-gray-100 mb-3">
                 1. IBAN Ekleme
               </h3>
-              <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed">
                 "Yeni IBAN Ekle" butonuna tıklayın ve IBAN bilgilerini girin.
                 Sistem otomatik olarak banka adını tespit eder ve IBAN formatını
                 düzenler. İsim, açıklama ve etiketler ekleyerek IBAN'ınızı
@@ -129,7 +129,7 @@ function AboutPage() {
               <h3 className="text-lg font-normal text-gray-900 dark:text-gray-100 mb-3">
                 2. Arama ve Filtreleme
               </h3>
-              <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed">
                 Arama kutusuna isim, açıklama veya etiket yazarak IBAN'larınızı
                 bulabilirsiniz. Banka filtreleme özelliği ile belirli bir
                 bankanın IBAN'larını listeleyebilirsiniz.
@@ -140,7 +140,7 @@ function AboutPage() {
               <h3 className="text-lg font-normal text-gray-900 dark:text-gray-100 mb-3">
                 3. Kopyalama ve Paylaşım
               </h3>
-              <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed">
                 IBAN'ları tek tıkla kopyalayabilir, QR kod oluşturabilirsiniz.
                 QR kodları mobil bankacılık uygulamalarında kolayca
                 tarayabilirsiniz. IBAN'ları gizleyebilir ve gerektiğinde tekrar
@@ -165,7 +165,7 @@ function AboutPage() {
                 <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
                   Güvenli Saklama
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-500 dark:text-gray-400">
                   AES-256 şifreleme ile verileriniz korunur
                 </p>
               </div>
@@ -177,7 +177,7 @@ function AboutPage() {
                 <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
                   Hızlı Erişim
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-500 dark:text-gray-400">
                   Saniyeler içinde IBAN'larınıza erişin
                 </p>
               </div>
@@ -189,7 +189,7 @@ function AboutPage() {
                 <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
                   Akıllı Arama
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-500 dark:text-gray-400">
                   İsim, açıklama ve etiketlerde arama
                 </p>
               </div>
@@ -201,7 +201,7 @@ function AboutPage() {
                 <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
                   QR Kod
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-500 dark:text-gray-400">
                   Otomatik QR kod oluşturma
                 </p>
               </div>
@@ -213,7 +213,7 @@ function AboutPage() {
                 <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
                   Mobil Uyumlu
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-500 dark:text-gray-400">
                   PWA desteği ile ana ekrana ekleyin
                 </p>
               </div>
@@ -225,7 +225,7 @@ function AboutPage() {
                 <h3 className="font-normal text-gray-900 dark:text-gray-100 mb-1">
                   Offline Çalışma
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-500 dark:text-gray-400">
                   İnternet olmadan da kullanın
                 </p>
               </div>
