@@ -1,12 +1,15 @@
 import React from 'react';
 
 class ErrorBoundary extends React.Component {
+  // Hata sınıfını oluşturuyoruz
   constructor(props) {
     super(props);
     this.state = { hasError: false, error: null };
   }
 
+  // Hata oluştuğunda state'i güncelliyoruz
   static getDerivedStateFromError(error) {
+    // Hata oluştuğunda state'i güncelliyoruz
     return { hasError: true, error };
   }
 

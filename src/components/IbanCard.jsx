@@ -26,8 +26,8 @@ function IbanCard({
 }) {
   const [showMenu, setShowMenu] = useState(false);
 
-  // Menü dışına tıklandığında kapat
-  useEffect(() => {
+    // Menü dışına tıklandığında kapatıyoruz
+    useEffect(() => {
     const handleClickOutside = (event) => {
       if (showMenu && !event.target.closest('.menu-container')) {
         setShowMenu(false);
@@ -39,14 +39,13 @@ function IbanCard({
   }, [showMenu]);
 
 
-
-
-
+  // IBAN kartını oluşturuyoruz
   return (
     <div className="card-modern p-3 sm:p-4 md:p-8 transition-all duration-300 mobile-iban-card w-full shadow-modern">
       <div className="flex flex-col md:flex-row md:items-start justify-between gap-3 md:gap-4">
         <div className="flex-1">
           <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+            {/* Banka logosunu gösteriyoruz */}
             {iban.bankName && isBank(iban.bankName) ? (
               getBankLogo(iban.bankName) ? (
                 <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl overflow-hidden bg-white border-2 border-gray-200 dark:border-gray-600 flex items-center justify-center">

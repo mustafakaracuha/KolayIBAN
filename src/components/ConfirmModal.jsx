@@ -16,6 +16,7 @@ function ConfirmModal({
   if (!isOpen) return null
 
   const getIconAndColors = () => {
+    // Türüne göre icon ve renkleri dönüyoruz
     switch (type) {
       case 'danger':
         return {

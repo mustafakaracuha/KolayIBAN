@@ -22,16 +22,19 @@ export const bankLogos = {
 };
 
 export const getBankLogo = (bankName) => {
+  // Banka logosunu dönüyoruz
   return bankLogos[bankName] || null;
 };
 
 export const isBank = (bankName) => {
+  // Eğer banka adı yoksa false dönüyoruz
   if (!bankName) return false;
-  
+  // Banka adının var olup olmadığını kontrol ediyoruz
   return bankLogos.hasOwnProperty(bankName);
 };
 
 export const getBankColor = (bankName) => {
+  // Banka rengini dönüyoruz
   const bankColors = {
     "Ziraat Bankası": "bg-red-600",
     "İş Bankası": "bg-blue-600", 
@@ -54,6 +57,6 @@ export const getBankColor = (bankName) => {
     "İş Katılım": "bg-blue-600",
     "Türkiye Emlak Katılım": "bg-blue-600"
   };
-  
+  // Eğer banka adı yoksa default rengi dönüyoruz
   return bankColors[bankName] || "bg-gradient-to-r from-blue-600 to-purple-600";
 };

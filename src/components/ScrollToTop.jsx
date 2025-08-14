@@ -4,10 +4,10 @@ import { ChevronUp } from 'lucide-react'
 function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false)
 
-  // Scroll pozisyonunu takip et
+  // Scroll pozisyonunu takip ediyoruz
   useEffect(() => {
     const toggleVisibility = () => {
-      // Hem window scroll hem de container scroll'u kontrol et
+      // Hem window scroll hem de container scroll'u kontrol ediyoruz
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
       const containerScroll = document.querySelector('.overflow-y-auto')?.scrollTop || 0
       
@@ -18,10 +18,10 @@ function ScrollToTop() {
       }
     }
 
-    // Window scroll event
+    // Window scroll event'ini ekliyoruz
     window.addEventListener('scroll', toggleVisibility)
     
-    // Container scroll event
+    // Container scroll event'ini ekliyoruz
     const container = document.querySelector('.overflow-y-auto')
     if (container) {
       container.addEventListener('scroll', toggleVisibility)
@@ -35,9 +35,9 @@ function ScrollToTop() {
     }
   }, [])
 
-  // Yukarı çık fonksiyonu
+  // Yukarı çık fonksiyonunu oluşturuyoruz
   const scrollToTop = () => {
-    // Önce container'ı yukarı çıkar
+    // Önce container'ı yukarı çıkarıyoruz
     const container = document.querySelector('.overflow-y-auto')
     if (container) {
       container.scrollTo({
@@ -46,7 +46,7 @@ function ScrollToTop() {
       })
     }
     
-    // Sonra window'u da yukarı çıkar
+    // Sonra window'u da yukarı çıkarıyoruz
     window.scrollTo({
       top: 0,
       behavior: 'smooth'

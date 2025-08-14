@@ -50,8 +50,9 @@ function HomePage() {
   // İlk yükleme
   useEffect(() => {
     const initializeApp = async () => {
+      // Uygulamayı başlatıyoruz
       try {
-        // Şifreleme anahtarını oluştur veya yükle
+        // Şifreleme anahtarını yüklüyoruz veya oluşturuyoruz
         let key = localStorage.getItem("encryptionKey");
         if (!key) {
           const { generateEncryptionKey } = await import("../utils");
@@ -60,18 +61,18 @@ function HomePage() {
         }
         setEncryptionKey(key);
 
-        // IBAN'ları yükle
+        // IBAN'ları yüklüyoruz
         const loadedIbans = loadIbans(key);
         setIbans(loadedIbans);
 
-        // Gizli IBAN'ları yükle
+        // Gizli IBAN'ları yüklüyoruz
         const hiddenIds = JSON.parse(localStorage.getItem("hiddenIbans") || "[]");
         setHiddenIbans(new Set(hiddenIds));
       } catch (error) {
         console.error("Uygulama başlatılırken hata:", error);
         toast.error("Uygulama başlatılırken hata oluştu!");
       } finally {
-        // Loading'i 1 saniye göster
+        // Loading'i 1 saniye gösteriyoruz
         setTimeout(() => {
           setIsLoading(false);
         }, 1000);
@@ -83,18 +84,17 @@ function HomePage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    // İsim ve IBAN alanları zorunlu olduğu için kontrol ediyoruz
     if (!formData.name.trim() || !formData.iban.trim()) {
       toast.error("İsim ve IBAN alanları zorunludur!");
       return;
     }
-
+    // IBAN formatını kontrol ediyoruz
     if (!validateIBAN(formData.iban)) {
       toast.error("Geçersiz IBAN formatı!");
       return;
     }
-
-    // Aynı IBAN'ın daha önce eklenip eklenmediğini kontrol et
+    // Aynı IBAN'ın daha önce eklenip eklenmediğini kontrol ediyoruz
     const formattedIban = formatIBAN(formData.iban);
     const existingIban = ibans.find(iban => iban.iban === formattedIban);
     
@@ -102,9 +102,8 @@ function HomePage() {
       toast.error(`Bu IBAN zaten "${existingIban.name}" adıyla kayıtlı! Lütfen farklı bir IBAN ekleyin.`);
       return;
     }
-
+    // Düzenleme modu
     if (isEditing && editingIban) {
-      // Düzenleme modu
       const updatedIban = {
         ...editingIban,
         name: formData.name.trim(),
@@ -117,11 +116,11 @@ function HomePage() {
           .filter((tag) => tag),
         updatedAt: new Date().toISOString(),
       };
-
+      // IBAN'ları güncelliyoruz
       const updatedIbans = ibans.map((iban) =>
         iban.id === editingIban.id ? updatedIban : iban
       );
-
+      // IBAN'ları kaydediyoruz
       if (saveIbans(updatedIbans, encryptionKey)) {
         setIbans(updatedIbans);
         setFormData({
@@ -152,7 +151,7 @@ function HomePage() {
           .filter((tag) => tag),
         createdAt: new Date().toISOString(),
       };
-
+      // Yeni IBAN'ı eklemek için güncellenmiş IBAN'ları oluşturuyoruz ve eski IBAN'ları da ekliyoruz
       const updatedIbans = [newIban,...ibans];
       if (saveIbans(updatedIbans, encryptionKey)) {
         setIbans(updatedIbans);
@@ -170,12 +169,11 @@ function HomePage() {
       }
     }
   };
-
   const copyToClipboard = (text) => {
+    // IBANI'ı panoya kopyalıyoruz
     navigator.clipboard.writeText(text);
     toast.success("IBAN kopyalandı!");
   };
-
   const editIban = (iban) => {
     setEditingIban(iban);
     setIsEditing(true);
@@ -188,14 +186,14 @@ function HomePage() {
     });
     setShowForm(true);
   };
-
   const deleteIban = (ibanId) => {
+    // Silinecek IBAN'ı buluyoruz
     const ibanToDelete = ibans.find(iban => iban.id === ibanId);
     if (!ibanToDelete) {
       toast.error("IBAN bulunamadı!");
       return;
     }
-
+    // Silme işlemi için modal'ı açıyoruz
     setConfirmModal({
       isOpen: true,
       title: "IBAN Sil",
@@ -206,37 +204,49 @@ function HomePage() {
       showPinInput: false,
       pinValue: "",
       onConfirm: () => {
+        // Silinecek IBAN'ı filtreliyoruz
         const updatedIbans = ibans.filter((i) => i.id !== ibanId);
+        // Silinen IBAN'ı kaydediyoruz
         if (saveIbans(updatedIbans, encryptionKey)) {
           setIbans(updatedIbans);
           toast.success("IBAN silindi!");
+          // Silme işlemi başarılı olursa toast mesajı gösteriyoruz
         } else {
           toast.error("IBAN silinirken hata oluştu!");
         }
+        // Modal'ı kapatıyoruz
         setConfirmModal((prev) => ({ ...prev, isOpen: false }));
       },
+      // İptal işlemi için modal'ı kapatıyoruz
       onCancel: () => setConfirmModal((prev) => ({ ...prev, isOpen: false })),
     });
   };
-
+  // IBAN'ın görünürlüğünü değiştiriyoruz
   const toggleIbanVisibility = (ibanId) => {
+    // Gizli IBAN'ların setini oluşturuyoruz
     const newHiddenIbans = new Set(hiddenIbans);
     if (newHiddenIbans.has(ibanId)) {
+      // Eğer IBAN zaten gizli ise görünür yapıyoruz
       newHiddenIbans.delete(ibanId);
     } else {
+      // Eğer IBAN gizli değil ise gizli yapıyoruz
       newHiddenIbans.add(ibanId);
     }
+    // Gizli IBAN'ları set'e kaydediyoruz
     setHiddenIbans(newHiddenIbans);
+    // Gizli IBAN'ları localStorage'a kaydediyoruz
     localStorage.setItem("hiddenIbans", JSON.stringify([...newHiddenIbans]));
   };
-
+  // Filtrelenmiş IBAN'ları oluşturuyoruz
   const filteredIbans = ibans.filter((iban) => {
+    // Arama terimi ile eşleşen IBAN'ları buluyoruz
     const matchesSearch =
       iban.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       iban.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       iban.tags.some((tag) =>
         tag.toLowerCase().includes(searchTerm.toLowerCase())
       );
+    // Banka adı ile eşleşen IBAN'ları buluyoruz
     const matchesBank = !selectedBank || iban.bankName === selectedBank;
     return matchesSearch && matchesBank;
   });

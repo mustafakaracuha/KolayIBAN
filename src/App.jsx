@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 
-// Route transition component
+// Route transition bileşenini oluşturuyoruz
 const PageTransition = ({ children }) => {
   return (
     <motion.div
@@ -23,7 +23,7 @@ const PageTransition = ({ children }) => {
   );
 };
 
-// Main App component with routing
+// Ana App bileşeni ile routing oluşturuyoruz
 function App() {
   return (
     <Router>

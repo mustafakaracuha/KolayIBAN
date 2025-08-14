@@ -1,10 +1,12 @@
 import IBAN from "iban";
 
 export const validateIBAN = (iban) => {
+  // IBAN'ın geçerli olup olmadığını kontrol ediyoruz
   return IBAN.isValid(iban);
 };
 
 export const formatIBAN = (iban) => {
+  // IBAN'ı boşlukları kaldırıyoruz ve 4 hanlık gruplar halinde dönüştürüyoruz
   return (
     iban
       .replace(/\s/g, "")
@@ -59,13 +61,18 @@ export const turkishBanks = [
 ];
 
 export const getBankFromIBAN = (iban) => {
+  // IBAN'ın geçerli olup olmadığını kontrol ediyoruz
   if (!iban || iban.length < 7) return null;
   
+  // Boşlukları kaldırıyoruz ve büyük harfe çeviriyoruz
   const cleanIban = iban.replace(/\s/g, "").toUpperCase();
   
+  // Banka kodunu alıyoruz
   const bankCode = cleanIban.substring(5, 9);
 
+  // Banka kodunu kontrol ediyoruz
   const detectedBank = bankCodes[bankCode];
   
+  // Eğer banka kodu geçerli değilse null dönüyoruz
   return detectedBank || null;
 };
