@@ -6,12 +6,6 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: '/',
   build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    target: 'es2015',
-    minify: 'esbuild'
-  },
-  server: {
-    host: true
+    outDir: 'dist'
   }
 })
