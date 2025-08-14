@@ -5,8 +5,6 @@ import {
   Zap,
   Smartphone,
   Search,
-  Copy,
-  ChevronDown,
   QrCode,
   Lock,
   Globe,
@@ -14,14 +12,8 @@ import {
   Twitter,
   Linkedin,
   Mail,
-  Star,
   Heart,
-  CheckCircle,
-  TrendingUp,
-  Clock,
-  Target,
   ArrowUp,
-  Plus,
 } from "lucide-react";
 
 function AboutPage() {
