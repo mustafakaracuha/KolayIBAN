@@ -396,7 +396,7 @@ function AboutPage() {
               <h4 className="text-xl font-bold mb-6">İletişim</h4>
               <div className="space-y-4">
                 <a 
-                  href="https://github.com/mustafakaracuha/iban-kasa" 
+                  href="https://github.com/mustafakaracuha/KolayIban" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
