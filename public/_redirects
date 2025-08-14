@@ -1,7 +1,16 @@
+# Static assets
 /assets/* /assets/:splat 200
+/favicon.ico /favicon.svg 200
+/favicon.svg /favicon.svg 200
+/manifest.json /manifest.json 200
+/sw.js /sw.js 200
+
+# JavaScript and CSS files
 /*.js /assets/:splat.js 200
 /*.css /assets/:splat.css 200
 /*.mjs /assets/:splat.mjs 200
+
+# All other routes to index.html for SPA routing
 /* /index.html 200
 
 # Cache headers for assets
