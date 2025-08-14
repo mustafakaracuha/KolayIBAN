@@ -11,15 +11,5 @@
   Content-Type: application/javascript; charset=utf-8
   Cache-Control: public, max-age=31536000, immutable
 
-# Handle other static assets
-*.js /assets/:splat.js 200
-  Content-Type: application/javascript; charset=utf-8
-
-*.css /assets/:splat.css 200
-  Content-Type: text/css; charset=utf-8
-
-*.mjs /assets/:splat.mjs 200
-  Content-Type: application/javascript; charset=utf-8
-
 # SPA fallback - all other routes go to index.html
 /* /index.html 200
