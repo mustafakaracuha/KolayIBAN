@@ -10,32 +10,9 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     target: 'es2015',
-    minify: 'esbuild',
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-        format: 'es',
-        assetFileNames: 'assets/[name].[hash][extname]',
-        chunkFileNames: 'assets/[name].[hash].js',
-        entryFileNames: 'assets/[name].[hash].js'
-      }
-    }
-  },
-  esbuild: {
-    target: 'es2015'
+    minify: 'esbuild'
   },
   server: {
     host: true
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom']
-  },
-  define: {
-    'process.env.NODE_ENV': '"production"'
-  },
-  resolve: {
-    alias: {
-      '@': '/src'
-    }
   }
 })
