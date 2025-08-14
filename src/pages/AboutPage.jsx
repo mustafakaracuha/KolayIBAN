@@ -40,28 +40,28 @@ function AboutPage() {
     <main className="min-h-screen bg-white dark:bg-slate-900">
       {/* Hero Section */}
       <section className="pt-16 pb-12 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12">
+      <div className="max-w-3xl mx-auto px-6">
+          <div className="mb-12">
             {/* App Logo */}
-            <div className="w-20 h-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-3xl flex items-center justify-center mb-8 shadow-2xl mx-auto transform hover:scale-105 transition-transform duration-300">
+            <div className="w-20 h-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-3xl flex items-center justify-center mb-8 shadow-2xl transform hover:scale-105 transition-transform duration-300">
               <Shield className="w-10 h-10 text-white" />
             </div>
 
             <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               KolayIBAN
             </h1>
-            <p className="text-md md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto mb-8">
+            <p className="text-md md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mb-8">
               IBAN'larınızı güvenli ve kullanışlı bir şekilde yönetin. 
               <span className="font-semibold text-blue-600 dark:text-blue-400">Artık IBAN'ları not defterinde aramaya gerek yok.</span>
             </p>
             
-            <div className="flex flex-col items-center gap-6">
+            <div className="flex flex-col items-start gap-6">
               <Link
                 to="/home"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2"
+                className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-normal text-base transition-colors underline flex items-center gap-2"
               >
-                İlk IBAN'ınını Ekle
-                <span className="text-xl">→</span>
+                İlk IBAN'ını Ekle
+                <span className="text-lg">→</span>
               </Link>
               
               <div className="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
