@@ -115,7 +115,7 @@ function AboutPage() {
                     />
                   </div>
                   <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100 text-center">
-                    Ana Sayfa
+                    IBAN'larım
                   </h3>
                 </div>
 
