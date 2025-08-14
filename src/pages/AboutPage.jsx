@@ -53,21 +53,21 @@ function AboutPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700">
       {/* Hero Section */}
-      <div className="pt-8 sm:pt-14 pb-12 sm:pb-16 relative overflow-hidden">
+      <section className="pt-8 sm:pt-14 pb-12 sm:pb-16 relative overflow-hidden" aria-labelledby="hero-title">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           {/* Hero Content */}
           <div className="text-center mb-12 sm:mb-20">
             <div className="relative">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-6 sm:mb-8 shadow-2xl relative">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-6 sm:mb-8 shadow-2xl relative" role="img" aria-label="KolayIBAN logosu">
                 <Shield className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
               </div>
             </div>
             
-                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 dark:text-gray-100 mb-4 sm:mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent leading-tight">
-               KolayIBAN
-             </h1>
+            <h1 id="hero-title" className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 dark:text-gray-100 mb-4 sm:mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent leading-tight">
+              KolayIBAN
+            </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4 font-medium">
               IBAN'larınızı güvenli ve kullanışlı bir şekilde yönetin. 
               <span className="text-blue-600 dark:text-blue-400 font-semibold"> Artık IBAN'ları not defterinde aramaya gerek yok!</span>
@@ -90,27 +90,27 @@ function AboutPage() {
 
             {/* Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto px-4 mb-8 sm:mb-12">
-              <div className="bg-white/90 dark:bg-slate-800/90 rounded-2xl p-6 shadow-xl border border-blue-200 dark:border-blue-800 hover:shadow-2xl transition-all duration-300">
+              <article className="bg-white/90 dark:bg-slate-800/90 rounded-2xl p-6 shadow-xl border border-blue-200 dark:border-blue-800 hover:shadow-2xl transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl mb-4 mx-auto">
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2 text-center">Hızlı</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm text-center">Saniyeler içinde IBAN bulun</p>
-              </div>
-              <div className="bg-white/90 dark:bg-slate-800/90 rounded-2xl p-6 shadow-xl border border-green-200 dark:border-green-800 hover:shadow-2xl transition-all duration-300">
+              </article>
+              <article className="bg-white/90 dark:bg-slate-800/90 rounded-2xl p-6 shadow-xl border border-green-200 dark:border-green-800 hover:shadow-2xl transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl mb-4 mx-auto">
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2 text-center">Güvenli</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm text-center">AES-256 şifreleme</p>
-              </div>
-              <div className="bg-white/90 dark:bg-slate-800/90 rounded-2xl p-6 shadow-xl border border-purple-200 dark:border-purple-800 hover:shadow-2xl transition-all duration-300">
+              </article>
+              <article className="bg-white/90 dark:bg-slate-800/90 rounded-2xl p-6 shadow-xl border border-purple-200 dark:border-purple-800 hover:shadow-2xl transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl mb-4 mx-auto">
                   <Smartphone className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2 text-center">Mobil</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm text-center">Tüm cihazlarda çalışır</p>
-              </div>
+              </article>
             </div>
 
             {/* Hero CTA Button */}
@@ -118,6 +118,7 @@ function AboutPage() {
               <Link 
                 to="/home" 
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transition-all duration-200"
+                aria-label="İlk IBAN'ınızı eklemek için ana sayfaya gidin"
               >
                 İlk IBAN'ını Ekle
               </Link>
@@ -127,18 +128,18 @@ function AboutPage() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Features Section */}
-      <div className="py-12 sm:py-16 md:py-20 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm relative">
+      <section className="py-12 sm:py-16 md:py-20 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm relative" aria-labelledby="features-title">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50 dark:from-slate-800/50 dark:to-slate-700/50"></div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
-                         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-lg">
-               <Target className="w-4 h-4" />
-               Neden KolayIBAN?
-             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-6">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-lg">
+              <Target className="w-4 h-4" />
+              Neden KolayIBAN?
+            </div>
+            <h2 id="features-title" className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-6">
               Günlük Hayatınızı Kolaylaştırın
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
@@ -149,7 +150,7 @@ function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Feature 1 */}
-            <div className="group bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-blue-200 dark:border-blue-800 hover:scale-105 hover:border-blue-300">
+            <article className="group bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-blue-200 dark:border-blue-800 hover:scale-105 hover:border-blue-300">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <Lock className="w-8 h-8 text-white" />
               </div>
@@ -163,10 +164,10 @@ function AboutPage() {
                 <CheckCircle className="w-4 h-4" />
                 <span className="text-sm font-medium">End-to-end şifreleme</span>
               </div>
-            </div>
+            </article>
 
             {/* Feature 2 */}
-            <div className="group bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-green-200 dark:border-green-800 hover:scale-105 hover:border-green-300">
+            <article className="group bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-green-200 dark:border-green-800 hover:scale-105 hover:border-green-300">
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <Zap className="w-8 h-8 text-white" />
               </div>
@@ -180,10 +181,10 @@ function AboutPage() {
                 <CheckCircle className="w-4 h-4" />
                 <span className="text-sm font-medium">Saniyeler içinde erişim</span>
               </div>
-            </div>
+            </article>
 
             {/* Feature 3 */}
-            <div className="group bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-purple-200 dark:border-purple-800 hover:scale-105 hover:border-purple-300">
+            <article className="group bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-purple-200 dark:border-purple-800 hover:scale-105 hover:border-purple-300">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <Smartphone className="w-8 h-8 text-white" />
               </div>
@@ -197,10 +198,10 @@ function AboutPage() {
                 <CheckCircle className="w-4 h-4" />
                 <span className="text-sm font-medium">Offline çalışma</span>
               </div>
-            </div>
+            </article>
 
             {/* Feature 4 */}
-            <div className="group bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-orange-200 dark:border-orange-800 hover:scale-105 hover:border-orange-300">
+            <article className="group bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-orange-200 dark:border-orange-800 hover:scale-105 hover:border-orange-300">
               <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <Search className="w-8 h-8 text-white" />
               </div>
@@ -214,10 +215,10 @@ function AboutPage() {
                 <CheckCircle className="w-4 h-4" />
                 <span className="text-sm font-medium">Gelişmiş filtreleme</span>
               </div>
-            </div>
+            </article>
 
             {/* Feature 5 */}
-            <div className="group bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-pink-200 dark:border-pink-800 hover:scale-105 hover:border-pink-300">
+            <article className="group bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-pink-200 dark:border-pink-800 hover:scale-105 hover:border-pink-300">
               <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <Copy className="w-8 h-8 text-white" />
               </div>
@@ -231,10 +232,10 @@ function AboutPage() {
                 <CheckCircle className="w-4 h-4" />
                 <span className="text-sm font-medium">Tek tıkla kopyalama</span>
               </div>
-            </div>
+            </article>
 
             {/* Feature 6 */}
-            <div className="group bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-indigo-200 dark:border-indigo-800 hover:scale-105 hover:border-indigo-300">
+            <article className="group bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-indigo-200 dark:border-indigo-800 hover:scale-105 hover:border-indigo-300">
               <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <QrCode className="w-8 h-8 text-white" />
               </div>
@@ -248,13 +249,13 @@ function AboutPage() {
                 <CheckCircle className="w-4 h-4" />
                 <span className="text-sm font-medium">Anında QR kod</span>
               </div>
-            </div>
+            </article>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* How It Works Section */}
-      <div className="py-12 sm:py-16 md:py-20 relative">
+      <section className="py-12 sm:py-16 md:py-20 relative" aria-labelledby="how-it-works-title">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/50 to-purple-50/50 dark:from-slate-800/50 dark:to-slate-700/50"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
@@ -262,7 +263,7 @@ function AboutPage() {
               <Clock className="w-4 h-4" />
               Nasıl Çalışır?
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-6">
+            <h2 id="how-it-works-title" className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-6">
               Sadece 3 Adım
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 px-4">
@@ -272,7 +273,7 @@ function AboutPage() {
 
           <div className="space-y-8 sm:space-y-12">
             {/* Step 1 */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 group">
+            <article className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 group">
               <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center text-2xl sm:text-3xl font-bold flex-shrink-0 shadow-xl group-hover:scale-110 transition-transform duration-300 mx-auto sm:mx-0 relative">
                 1
                 <div className="absolute inset-0 bg-blue-400/20 rounded-full animate-ping"></div>
@@ -285,10 +286,10 @@ function AboutPage() {
                   "IBAN Ekle" butonuna tıklayın ve IBAN bilgilerinizi girin. Sistem otomatik olarak banka adını tespit eder ve formatını düzenler.
                 </p>
               </div>
-            </div>
+            </article>
 
             {/* Step 2 */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 group">
+            <article className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 group">
               <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-green-500 to-green-600 text-white rounded-full flex items-center justify-center text-2xl sm:text-3xl font-bold flex-shrink-0 shadow-xl group-hover:scale-110 transition-transform duration-300 mx-auto sm:mx-0 relative">
                 2
                 <div className="absolute inset-0 bg-green-400/20 rounded-full animate-ping"></div>
@@ -301,10 +302,10 @@ function AboutPage() {
                   Etiketler ekleyerek IBAN'larınızı kategorilere ayırın. Kira, aile, iş gibi kategoriler oluşturun ve kolayca bulun.
                 </p>
               </div>
-            </div>
+            </article>
 
             {/* Step 3 */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 group">
+            <article className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 group">
               <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-full flex items-center justify-center text-2xl sm:text-3xl font-bold flex-shrink-0 shadow-xl group-hover:scale-110 transition-transform duration-300 mx-auto sm:mx-0 relative">
                 3
                 <div className="absolute inset-0 bg-purple-400/20 rounded-full animate-ping"></div>
@@ -317,10 +318,10 @@ function AboutPage() {
                   Arama yapın, filtreleyin ve tek tıkla IBAN'larınızı kopyalayın. QR kod ile kolayca paylaşın ve mobil bankacılıkta kullanın.
                 </p>
               </div>
-            </div>
+            </article>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Yukarı Çık Butonu */}
       {showScrollTop && (
@@ -328,26 +329,27 @@ function AboutPage() {
           onClick={scrollToTop}
           className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group"
           title="Yukarı Çık"
+          aria-label="Sayfanın en üstüne çık"
         >
           <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
         </button>
       )}
 
       {/* Footer */}
-      <div className="py-16 bg-gray-900 text-white relative">
+      <footer className="py-16 bg-gray-900 text-white relative" role="contentinfo">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900"></div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Project Info */}
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg" role="img" aria-label="KolayIBAN logosu">
                   <Shield className="w-7 h-7 text-white" />
                 </div>
-                                 <div>
-                   <h3 className="text-2xl font-bold">KolayIBAN</h3>
-                   <p className="text-gray-400">Güvenli IBAN Yönetimi</p>
-                 </div>
+                <div>
+                  <h3 className="text-2xl font-bold">KolayIBAN</h3>
+                  <p className="text-gray-400">Güvenli IBAN Yönetimi</p>
+                </div>
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed">
                 IBAN'larınızı güvenli ve kullanışlı bir şekilde yönetmek için tasarlanmış modern web uygulaması. 
@@ -399,6 +401,7 @@ function AboutPage() {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
+                  aria-label="GitHub profilini ziyaret et"
                 >
                   <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-gray-700 transition-colors">
                     <Github className="w-5 h-5" />
@@ -410,6 +413,7 @@ function AboutPage() {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
+                  aria-label="Twitter profilini ziyaret et"
                 >
                   <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-gray-700 transition-colors">
                     <Twitter className="w-5 h-5" />
@@ -421,6 +425,7 @@ function AboutPage() {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
+                  aria-label="LinkedIn profilini ziyaret et"
                 >
                   <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-gray-700 transition-colors">
                     <Linkedin className="w-5 h-5" />
@@ -430,6 +435,7 @@ function AboutPage() {
                 <a 
                   href="mailto:karacuhaa58@gmail.com" 
                   className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
+                  aria-label="E-posta gönder"
                 >
                   <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-gray-700 transition-colors">
                     <Mail className="w-5 h-5" />
@@ -441,11 +447,11 @@ function AboutPage() {
           </div>
 
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                         <p>© 2025 KolayIBAN. Tüm hakları saklıdır.</p>
+            <p>© 2025 KolayIBAN. Tüm hakları saklıdır.</p>
           </div>
         </div>
-      </div>
-    </div>
+      </footer>
+    </main>
   );
 }
 
