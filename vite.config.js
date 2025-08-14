@@ -4,19 +4,12 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/', // Vercel alt dizinde değilse '/' olmalı
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     target: 'es2015',
-    minify: 'esbuild',
-    rollupOptions: {
-      output: {
-        entryFileNames: 'assets/[name].[hash].js',
-        chunkFileNames: 'assets/[name].[hash].js',
-        assetFileNames: 'assets/[name].[hash].[ext]'
-      }
-    }
+    minify: 'esbuild'
   },
   server: {
     host: true

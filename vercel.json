@@ -1,8 +1,5 @@
 {
   "rewrites": [
-    { "source": "/assets/:path*", "destination": "/assets/:path*" },
-    { "source": "/bank-logos/:path*", "destination": "/bank-logos/:path*" },
-    { "source": "/screenshots/:path*", "destination": "/screenshots/:path*" },
-    { "source": "/:path*", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
