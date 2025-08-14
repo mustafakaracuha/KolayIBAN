@@ -9,7 +9,12 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     target: 'es2015',
-    minify: 'esbuild'
+    minify: 'esbuild',
+    rollupOptions: {
+      output: {
+        format: 'es'
+      }
+    }
   },
   server: {
     host: true
