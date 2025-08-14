@@ -34,6 +34,9 @@ function App() {
 
 function AnimatedRoutes() {
   const location = useLocation();
+  
+  // Debug için console.log ekleyelim
+  console.log('Current location:', location.pathname);
 
   return (
     <>
