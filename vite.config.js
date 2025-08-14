@@ -9,15 +9,7 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     target: 'es2015',
-    minify: 'esbuild',
-    rollupOptions: {
-      output: {
-        format: 'es',
-        entryFileNames: 'assets/[name].[hash].js',
-        chunkFileNames: 'assets/[name].[hash].js',
-        assetFileNames: 'assets/[name].[hash].[ext]'
-      }
-    }
+    minify: 'esbuild'
   },
   server: {
     host: true
