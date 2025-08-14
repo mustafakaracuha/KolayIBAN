@@ -1,45 +1,12 @@
 {
-  "outputDirectory": "dist",
   "rewrites": [
-    {
-      "source": "/favicon.ico",
-      "destination": "/favicon.svg"
-    },
     {
       "source": "/assets/:path*",
       "destination": "/assets/:path*"
     },
     {
-      "source": "/bank-logos/:path*",
-      "destination": "/bank-logos/:path*"
-    },
-    {
-      "source": "/screenshots/:path*",
-      "destination": "/screenshots/:path*"
-    },
-    {
       "source": "/:path*",
       "destination": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/assets/:path*.js",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/javascript; charset=utf-8"
-        }
-      ]
-    },
-    {
-      "source": "/assets/:path*.css",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/css; charset=utf-8"
-        }
-      ]
     }
   ]
 }
