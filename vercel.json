@@ -1,7 +1,5 @@
 {
-  "build": {
-    "outputDirectory": "dist"
-  },
+  "outputDirectory": "dist",
   "headers": [
     {
       "source": "/assets/(.*).js",
