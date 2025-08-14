@@ -13,7 +13,8 @@ export default defineConfig({
     minify: 'esbuild',
     rollupOptions: {
       output: {
-        manualChunks: undefined
+        manualChunks: undefined,
+        format: 'es'
       }
     }
   },
@@ -22,5 +23,8 @@ export default defineConfig({
   },
   server: {
     host: true
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom']
   }
 })
