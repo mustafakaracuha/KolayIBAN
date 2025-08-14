@@ -14,10 +14,12 @@ import {
   Mail,
   Heart,
   ArrowUp,
+  X,
 } from "lucide-react";
 
 function AboutPage() {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   // Scroll event listener
   useEffect(() => {
@@ -48,11 +50,10 @@ function AboutPage() {
                 KolayIBAN
               </h1>
               <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-4 md:mb-6">
-                IBAN'larınızı güvenli ve kullanışlı bir şekilde yönetin. 
+                IBAN'larınızı güvenli ve kullanışlı bir şekilde yönetin.
               </p>
-              
+
               <div className="flex flex-col items-start gap-4">
-              
                 <Link
                   to="/home"
                   className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-semibold text-base transition-colors flex items-center gap-2"
@@ -92,6 +93,91 @@ function AboutPage() {
               </div>
             </div>
 
+            {/* Screenshots Section */}
+            <div>
+              <h2 className="text-2xl font-normal text-gray-900 dark:text-gray-100 mb-8">
+                Ekran Görüntüleri
+              </h2>
+
+              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="space-y-3">
+                  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer hover:shadow-xl transition-shadow duration-200">
+                    <img
+                      src="/screenshots/home.png"
+                      alt="Ana Sayfa"
+                      className="w-full h-48 object-cover"
+                      onClick={() =>
+                        setSelectedImage({
+                          src: "/screenshots/home.png",
+                          title: "Ana Sayfa",
+                        })
+                      }
+                    />
+                  </div>
+                  <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100 text-center">
+                    Ana Sayfa
+                  </h3>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer hover:shadow-xl transition-shadow duration-200">
+                    <img
+                      src="/screenshots/add-iban.png"
+                      alt="IBAN Ekleme"
+                      className="w-full h-48 object-cover"
+                      onClick={() =>
+                        setSelectedImage({
+                          src: "/screenshots/add-iban.png",
+                          title: "IBAN Ekleme",
+                        })
+                      }
+                    />
+                  </div>
+                  <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100 text-center">
+                    IBAN Ekleme
+                  </h3>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer hover:shadow-xl transition-shadow duration-200">
+                    <img
+                      src="/screenshots/qr.png"
+                      alt="QR Kod"
+                      className="w-full h-48 object-cover"
+                      onClick={() =>
+                        setSelectedImage({
+                          src: "/screenshots/qr.png",
+                          title: "QR Kod",
+                        })
+                      }
+                    />
+                  </div>
+                  <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100 text-center">
+                    QR Kod
+                  </h3>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer hover:shadow-xl transition-shadow duration-200">
+                    <img
+                      src="/screenshots/about.png"
+                      alt="Hakkında"
+                      className="w-full h-48 object-cover"
+                      onClick={() =>
+                        setSelectedImage({
+                          src: "/screenshots/about.png",
+                          title: "Hakkında",
+                        })
+                      }
+                    />
+                  </div>
+                  <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100 text-center">
+                    Hakkında
+                  </h3>
+                </div>
+              </div>
+            </div>
+
             {/* How to Use Section */}
             <div>
               <h2 className="text-2xl font-normal text-gray-900 dark:text-gray-100 mb-8">
@@ -104,10 +190,10 @@ function AboutPage() {
                     1. IBAN Ekleme
                   </h3>
                   <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed">
-                    "Yeni IBAN Ekle" butonuna tıklayın ve IBAN bilgilerini girin.
-                    Sistem otomatik olarak banka adını tespit eder ve IBAN formatını
-                    düzenler. İsim, açıklama ve etiketler ekleyerek IBAN'ınızı
-                    kategorilere ayırabilirsiniz.
+                    "Yeni IBAN Ekle" butonuna tıklayın ve IBAN bilgilerini
+                    girin. Sistem otomatik olarak banka adını tespit eder ve
+                    IBAN formatını düzenler. İsim, açıklama ve etiketler
+                    ekleyerek IBAN'ınızı kategorilere ayırabilirsiniz.
                   </p>
                 </div>
 
@@ -116,9 +202,9 @@ function AboutPage() {
                     2. Arama ve Filtreleme
                   </h3>
                   <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed">
-                    Arama kutusuna isim, açıklama veya etiket yazarak IBAN'larınızı
-                    bulabilirsiniz. Banka filtreleme özelliği ile belirli bir
-                    bankanın IBAN'larını listeleyebilirsiniz.
+                    Arama kutusuna isim, açıklama veya etiket yazarak
+                    IBAN'larınızı bulabilirsiniz. Banka filtreleme özelliği ile
+                    belirli bir bankanın IBAN'larını listeleyebilirsiniz.
                   </p>
                 </div>
 
@@ -127,10 +213,10 @@ function AboutPage() {
                     3. Kopyalama ve Paylaşım
                   </h3>
                   <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed">
-                    IBAN'ları tek tıkla kopyalayabilir, QR kod oluşturabilirsiniz.
-                    QR kodları mobil bankacılık uygulamalarında kolayca
-                    tarayabilirsiniz. IBAN'ları gizleyebilir ve gerektiğinde tekrar
-                    görünür yapabilirsiniz.
+                    IBAN'ları tek tıkla kopyalayabilir, QR kod
+                    oluşturabilirsiniz. QR kodları mobil bankacılık
+                    uygulamalarında kolayca tarayabilirsiniz. IBAN'ları
+                    gizleyebilir ve gerektiğinde tekrar görünür yapabilirsiniz.
                   </p>
                 </div>
               </div>
@@ -220,6 +306,35 @@ function AboutPage() {
         </div>
       </section>
 
+      {/* Image Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-4xl max-h-full">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+            >
+              <X className="w-8 h-8" />
+            </button>
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden">
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.title}
+                className="w-full h-auto max-h-[80vh] object-contain"
+              />
+              <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 text-center">
+                  {selectedImage.title}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Yukarı Çık Butonu */}
       {showScrollTop && (
         <button
@@ -252,7 +367,6 @@ function AboutPage() {
                   </p>
                 </div>
               </div>
-             
             </div>
 
             {/* Quick Links */}
@@ -315,7 +429,9 @@ function AboutPage() {
             <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
               <Heart className="w-4 h-4 text-red-500 animate-pulse" />
               <span className="font-medium">Made with love by</span>
-              <span className="text-blue-600 dark:text-blue-400 font-semibold">Mustafa Karaçuha</span>
+              <span className="text-blue-600 dark:text-blue-400 font-semibold">
+                Mustafa Karaçuha
+              </span>
             </div>
 
             <div className="flex items-center gap-4">
@@ -359,7 +475,11 @@ function AboutPage() {
           {/* Copyright */}
           <div className="text-center pt-6 border-t border-gray-200 dark:border-gray-700">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              © 2025 <span className="font-semibold text-blue-600 dark:text-blue-400">KolayIBAN</span>. Tüm hakları saklıdır.
+              © 2025{" "}
+              <span className="font-semibold text-blue-600 dark:text-blue-400">
+                KolayIBAN
+              </span>
+              . Tüm hakları saklıdır.
             </p>
           </div>
         </div>
