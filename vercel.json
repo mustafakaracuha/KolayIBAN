@@ -58,5 +58,19 @@
       "source": "/sitemap.xml",
       "destination": "/sitemap.xml"
     }
+  ],
+  "routes": [
+    {
+      "src": "/home",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/about",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
