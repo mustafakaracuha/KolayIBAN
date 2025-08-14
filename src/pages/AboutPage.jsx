@@ -37,45 +37,47 @@ function AboutPage() {
   };
 
   return (
-    <main className="min-h-screen bg-white dark:bg-slate-900">
+    <main className="min-h-screen bg-white dark:bg-gray-800">
       {/* Hero Section */}
-      <section className="pt-16 pb-12 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800">
-      <div className="max-w-3xl mx-auto px-6">
-          <div className="mb-12">
+      <section className="pt-10 pb-12 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800">
+        <div className="max-w-4xl mx-auto px-6 lg:px-20 ">
+          <div className="flex items-start gap-4 md:gap-8">
             {/* App Logo */}
-            <div className="w-20 h-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-3xl flex items-center justify-center mb-8 shadow-2xl transform hover:scale-105 transition-transform duration-300">
-              <Shield className="w-10 h-10 text-white" />
+            <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-2xl md:rounded-3xl flex items-center justify-center shadow-2xl transform hover:scale-105 transition-transform duration-300 flex-shrink-0">
+              <Shield className="w-8 h-8 md:w-12 md:h-12 text-white" />
             </div>
 
-            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              KolayIBAN
-            </h1>
-            <p className="text-md md:text-xl text-gray-500 dark:text-gray-300 leading-relaxed max-w-2xl mb-8">
-              IBAN'larınızı güvenli ve kullanışlı bir şekilde yönetin. 
-            </p>
-            
-            <div className="flex flex-col items-start gap-6">
-              <Link
-                to="/home"
-                className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-normal text-base transition-colors underline flex items-center gap-2"
-              >
-                İlk IBAN'ını Ekle
-                <span className="text-lg">→</span>
-              </Link>
+            {/* Content */}
+            <div className="flex-1">
+              <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-3 md:mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                KolayIBAN
+              </h1>
+              <p className="text-sm md:text-md lg:text-xl text-gray-500 dark:text-gray-300 leading-relaxed mb-4 md:mb-6">
+                IBAN'larınızı güvenli ve kullanışlı bir şekilde yönetin. 
+              </p>
               
-              <div className="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>Güvenli</span>
+              <div className="flex flex-col items-start gap-4">
+                <div className="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span>Güvenli</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span>Ücretsiz</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span>Hızlı</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span>Ücretsiz</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                  <span>Hızlı</span>
-                </div>
+                <Link
+                  to="/home"
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-normal text-base transition-colors underline flex items-center gap-2"
+                >
+                  İlk IBAN'ını Ekle
+                  <span className="text-lg">→</span>
+                </Link>
               </div>
             </div>
           </div>
