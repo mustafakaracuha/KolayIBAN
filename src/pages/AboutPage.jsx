@@ -52,7 +52,6 @@ function AboutPage() {
             </h1>
             <p className="text-md md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mb-8">
               IBAN'larınızı güvenli ve kullanışlı bir şekilde yönetin. 
-              <span className="font-semibold text-blue-600 dark:text-blue-400">Artık IBAN'ları not defterinde aramaya gerek yok.</span>
             </p>
             
             <div className="flex flex-col items-start gap-6">
