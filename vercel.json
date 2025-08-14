@@ -5,6 +5,14 @@
       "destination": "/assets/$1"
     },
     {
+      "source": "/bank-logos/(.*)",
+      "destination": "/bank-logos/$1"
+    },
+    {
+      "source": "/screenshots/(.*)",
+      "destination": "/screenshots/$1"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
