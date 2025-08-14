@@ -6,6 +6,7 @@ import {
   Smartphone, 
   Search, 
   Copy, 
+  ChevronDown,
   QrCode, 
   Lock, 
   Globe,
@@ -13,22 +14,12 @@ import {
   Twitter,
   Linkedin,
   Mail,
-  ArrowLeft,
   Star,
-  Users,
-  Code,
   Heart,
   CheckCircle,
-  Sparkles,
   TrendingUp,
-  Award,
   Clock,
-  ArrowRight,
-  ChevronRight,
   Target,
-  BarChart3,
-  Users2,
-  Building2,
   ArrowUp
 } from 'lucide-react';
 
@@ -55,25 +46,25 @@ function AboutPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700">
       {/* Hero Section */}
-      <section className="pt-8 sm:pt-14 pb-12 sm:pb-16 relative overflow-hidden" aria-labelledby="hero-title">
+      <section className="pt-6 sm:pt-10 pb-8 sm:pb-12 relative overflow-hidden" aria-labelledby="hero-title">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           {/* Hero Content */}
-          <div className="text-center mb-12 sm:mb-20">
+          <div className="text-center mb-8 sm:mb-16">
             <div className="relative">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-6 sm:mb-8 shadow-2xl relative" role="img" aria-label="KolayIBAN logosu">
-                <Shield className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 md:mb-8 shadow-2xl relative" role="img" aria-label="KolayIBAN logosu">
+                <Shield className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" />
               </div>
             </div>
             
-            <h1 id="hero-title" className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 dark:text-gray-100 mb-4 sm:mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent leading-tight">
+            <h1 id="hero-title" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-800 dark:text-gray-100 mb-3 sm:mb-4 md:mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent leading-tight">
               KolayIBAN
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4 font-medium">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed px-4 font-medium">
               IBAN'larınızı güvenli ve kullanışlı bir şekilde yönetin. 
               <span className="text-blue-600 dark:text-blue-400 font-semibold"> Artık IBAN'ları not defterinde aramaya gerek yok!</span>
             </p>
             
-            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-sm text-gray-500 dark:text-gray-400 mb-6 sm:mb-8 px-4">
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-6 text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-4 sm:mb-6 md:mb-8 px-4">
               <div className="flex items-center gap-2 bg-white/90 dark:bg-slate-800/90 px-4 py-3 rounded-full shadow-lg border border-blue-200 dark:border-blue-800">
                 <Star className="w-4 h-4 text-yellow-500 fill-current" />
                 <span className="font-semibold text-xs sm:text-sm">100% Ücretsiz</span>
@@ -89,42 +80,50 @@ function AboutPage() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto px-4 mb-8 sm:mb-12">
-              <article className="bg-white/90 dark:bg-slate-800/90 rounded-2xl p-6 shadow-xl border border-blue-200 dark:border-blue-800 hover:shadow-2xl transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl mb-4 mx-auto">
-                  <TrendingUp className="w-6 h-6 text-white" />
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-3xl mx-auto px-4 mb-6 sm:mb-8 md:mb-12">
+              <article className="bg-white/90 dark:bg-slate-800/90 rounded-2xl p-4 sm:p-6 shadow-xl border border-blue-200 dark:border-blue-800 hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl mb-3 sm:mb-4 mx-auto">
+                  <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2 text-center">Hızlı</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm text-center">Saniyeler içinde IBAN bulun</p>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 dark:text-gray-100 mb-1 sm:mb-2 text-center">Hızlı</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm text-center">Saniyeler içinde IBAN bulun</p>
               </article>
-              <article className="bg-white/90 dark:bg-slate-800/90 rounded-2xl p-6 shadow-xl border border-green-200 dark:border-green-800 hover:shadow-2xl transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl mb-4 mx-auto">
-                  <Shield className="w-6 h-6 text-white" />
+              <article className="bg-white/90 dark:bg-slate-800/90 rounded-2xl p-4 sm:p-6 shadow-xl border border-green-200 dark:border-green-800 hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl mb-3 sm:mb-4 mx-auto">
+                  <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2 text-center">Güvenli</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm text-center">AES-256 şifreleme</p>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 dark:text-gray-100 mb-1 sm:mb-2 text-center">Güvenli</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm text-center">AES-256 şifreleme</p>
               </article>
-              <article className="bg-white/90 dark:bg-slate-800/90 rounded-2xl p-6 shadow-xl border border-purple-200 dark:border-purple-800 hover:shadow-2xl transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl mb-4 mx-auto">
-                  <Smartphone className="w-6 h-6 text-white" />
+              <article className="bg-white/90 dark:bg-slate-800/90 rounded-2xl p-4 sm:p-6 shadow-xl border border-purple-200 dark:border-purple-800 hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl mb-3 sm:mb-4 mx-auto">
+                  <Smartphone className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2 text-center">Mobil</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm text-center">Tüm cihazlarda çalışır</p>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 dark:text-gray-100 mb-1 sm:mb-2 text-center">Mobil</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm text-center">Tüm cihazlarda çalışır</p>
               </article>
             </div>
 
             {/* Hero CTA Button */}
-            <div className="text-center mb-8 sm:mb-12">
+            <div className="text-center mb-6 sm:mb-8 md:mb-12">
               <Link 
                 to="/home" 
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transition-all duration-200"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-base sm:text-lg hover:shadow-lg transition-all duration-200"
                 aria-label="İlk IBAN'ınızı eklemek için ana sayfaya gidin"
               >
                 İlk IBAN'ını Ekle
               </Link>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-3">
+              <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-2 sm:mt-3">
                 Ücretsiz başlayın • Kayıt gerekmez • Hemen kullanın
               </p>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="flex flex-col items-center justify-center mt-4 sm:mt-6 md:mt-8 animate-bounce">
+              <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-300 dark:border-gray-600 rounded-full flex justify-center">
+                <div className="w-1 h-2 sm:h-3 bg-gray-400 dark:bg-gray-500 rounded-full mt-1 sm:mt-2 animate-pulse"></div>
+              </div>
+              <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 dark:text-gray-500 mt-1 sm:mt-2 animate-bounce" />
             </div>
           </div>
         </div>
