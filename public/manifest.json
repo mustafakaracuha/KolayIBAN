@@ -1,6 +1,6 @@
 {
-  "name": "IBAN Kasa - Güvenli IBAN Kasası",
-  "short_name": "IBAN Kasa",
+  "name": "KolayIBAN - Güvenli IBAN Yönetimi",
+  "short_name": "KolayIBAN",
   "description": "IBAN'larınızı kolayca yönetin - Güvenli ve kolay IBAN yönetimi",
   "version": "1.0.1",
   "start_url": "/",

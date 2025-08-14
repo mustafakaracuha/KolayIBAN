@@ -1,4 +1,4 @@
-# IBAN Kasa - Güvenli IBAN Kasası
+# KolayIBAN - Güvenli IBAN Yönetimi
 
 Güvenli IBAN yönetimi uygulaması. Kullanıcılar kendi veya başkalarına ait IBAN bilgilerini güvenli şekilde kaydedip hızlıca erişebilirler.
 
@@ -127,4 +127,4 @@ MIT License
 
 ---
 
-**IBAN Kasa** - IBAN'larınızı güvenle saklayın, hızlıca erişin! 🔐💳
+**KolayIBAN** - IBAN'larınızı güvenle saklayın, hızlıca erişin! 🔐💳

@@ -65,9 +65,9 @@ function AboutPage() {
               </div>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 dark:text-gray-100 mb-4 sm:mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent leading-tight">
-              IBAN Kasa
-            </h1>
+                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 dark:text-gray-100 mb-4 sm:mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent leading-tight">
+               KolayIBAN
+             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4 font-medium">
               IBAN'larınızı güvenli ve kullanışlı bir şekilde yönetin. 
               <span className="text-blue-600 dark:text-blue-400 font-semibold"> Artık IBAN'ları not defterinde aramaya gerek yok!</span>
@@ -134,10 +134,10 @@ function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50 dark:from-slate-800/50 dark:to-slate-700/50"></div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-lg">
-              <Target className="w-4 h-4" />
-              Neden IBAN Kasa?
-            </div>
+                         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-lg">
+               <Target className="w-4 h-4" />
+               Neden KolayIBAN?
+             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-6">
               Günlük Hayatınızı Kolaylaştırın
             </h2>
@@ -344,10 +344,10 @@ function AboutPage() {
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
                   <Shield className="w-7 h-7 text-white" />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold">IBAN Kasa</h3>
-                  <p className="text-gray-400">Güvenli IBAN Yönetimi</p>
-                </div>
+                                 <div>
+                   <h3 className="text-2xl font-bold">KolayIBAN</h3>
+                   <p className="text-gray-400">Güvenli IBAN Yönetimi</p>
+                 </div>
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed">
                 IBAN'larınızı güvenli ve kullanışlı bir şekilde yönetmek için tasarlanmış modern web uygulaması. 
@@ -441,7 +441,7 @@ function AboutPage() {
           </div>
 
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>© 2025 IBAN Kasa. Tüm hakları saklıdır.</p>
+                         <p>© 2025 KolayIBAN. Tüm hakları saklıdır.</p>
           </div>
         </div>
       </div>
