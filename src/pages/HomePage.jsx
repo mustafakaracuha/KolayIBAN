@@ -65,8 +65,12 @@ function HomePage() {
         const loadedIbans = loadIbans(key);
         setIbans(loadedIbans);
 
-        // Gizli IBAN'ları yüklüyoruz
-        const hiddenIds = JSON.parse(localStorage.getItem("hiddenIbans") || "[]");
+        // Gizli IBAN'ları yüklüyoruz - varsayılan olarak tüm IBAN'lar gizli
+        const savedHiddenIds = JSON.parse(localStorage.getItem("hiddenIbans") || "[]");
+        const allIbanIds = loadedIbans.map(iban => iban.id);
+        
+        // Eğer localStorage'da kayıtlı hiddenIbans yoksa, tüm IBAN'ları gizli yap
+        const hiddenIds = savedHiddenIds.length > 0 ? savedHiddenIds : allIbanIds;
         setHiddenIbans(new Set(hiddenIds));
       } catch (error) {
         console.error("Uygulama başlatılırken hata:", error);
@@ -155,6 +159,12 @@ function HomePage() {
       const updatedIbans = [newIban,...ibans];
       if (saveIbans(updatedIbans, encryptionKey)) {
         setIbans(updatedIbans);
+        
+        // Yeni IBAN'ı gizli yap
+        const updatedHiddenIbans = new Set([...hiddenIbans, newIban.id]);
+        setHiddenIbans(updatedHiddenIbans);
+        localStorage.setItem("hiddenIbans", JSON.stringify([...updatedHiddenIbans]));
+        
         setFormData({
           name: "",
           iban: "",
@@ -221,6 +231,17 @@ function HomePage() {
       onCancel: () => setConfirmModal((prev) => ({ ...prev, isOpen: false })),
     });
   };
+  // QR kodunu açıp kapatıyoruz
+  const toggleQR = (ibanId) => {
+    if (showQR === ibanId) {
+      // Eğer aynı IBAN'ın QR'ı açıksa kapatıyoruz
+      setShowQR(null);
+    } else {
+      // Farklı IBAN'ın QR'ını açıyoruz
+      setShowQR(ibanId);
+    }
+  };
+
   // IBAN'ın görünürlüğünü değiştiriyoruz
   const toggleIbanVisibility = (ibanId) => {
     // Gizli IBAN'ların setini oluşturuyoruz
@@ -272,7 +293,7 @@ function HomePage() {
           showQR={showQR}
           hiddenIbans={hiddenIbans}
           onCopy={copyToClipboard}
-          onToggleQR={setShowQR}
+          onToggleQR={toggleQR}
           onDelete={deleteIban}
           onEdit={editIban}
           onToggleVisibility={toggleIbanVisibility}
