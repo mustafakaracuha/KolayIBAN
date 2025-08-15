@@ -1,17 +1,17 @@
 {
     "rewrites": [
       {
-        "source": "/assets/(.*)",
-        "destination": "/assets/$1"
+        "source": "/assets/:path*",
+        "destination": "/assets/:path*"
       },
       {
-        "source": "/(.*)",
+        "source": "/:path*",
         "destination": "/index.html"
       }
     ],
     "headers": [
       {
-        "source": "/assets/(.*).js",
+        "source": "/assets/:path*.js",
         "headers": [
           { "key": "Cache-Control", "value": "no-cache" }
         ]
