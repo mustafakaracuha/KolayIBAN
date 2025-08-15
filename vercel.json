@@ -1,87 +1,8 @@
 {
     "rewrites": [
         {
-            "source": "/",
-            "destination": "/index.html"
-        },
-        {
-            "source": "/home",
-            "destination": "/index.html"
-        },
-        {
             "source": "/(.*)",
             "destination": "/index.html"
-        }
-    ],
-    "headers": [
-        {
-            "source": "/assets/index-Dox9KKlv.js",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "application/javascript; charset=utf-8"
-                },
-                {
-                    "key": "Cache-Control",
-                    "value": "no-cache, no-store, must-revalidate"
-                }
-            ]
-        },
-        {
-            "source": "/assets/index-Ck94osA9.css",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "text/css; charset=utf-8"
-                },
-                {
-                    "key": "Cache-Control",
-                    "value": "no-cache, no-store, must-revalidate"
-                }
-            ]
-        },
-        {
-            "source": "/assets/(.*).js",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "application/javascript; charset=utf-8"
-                },
-                {
-                    "key": "Cache-Control",
-                    "value": "no-cache, no-store, must-revalidate"
-                }
-            ]
-        },
-        {
-            "source": "/assets/(.*).css",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "text/css; charset=utf-8"
-                },
-                {
-                    "key": "Cache-Control",
-                    "value": "no-cache, no-store, must-revalidate"
-                }
-            ]
-        },
-        {
-            "source": "/(.*)",
-            "headers": [
-                {
-                    "key": "Cache-Control",
-                    "value": "no-cache, no-store, must-revalidate"
-                },
-                {
-                    "key": "Pragma",
-                    "value": "no-cache"
-                },
-                {
-                    "key": "Expires",
-                    "value": "0"
-                }
-            ]
         }
     ]
 }
