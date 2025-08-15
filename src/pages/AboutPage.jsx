@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Header from "../components/Header";
 import {
   Shield,
   Zap,
@@ -41,11 +40,8 @@ function AboutPage() {
 
   return (
     <main className="min-h-screen bg-white dark:bg-gray-800">
-      <Header />
-      {/* Header sabit olduğu için üstten boşluk bırak */}
-      <div className="pt-32">
-        {/* Hero Section */}
-        <section className="pt-10 pb-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800">
+      {/* Hero Section */}
+      <section className="pt-10 pb-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800">
         <div className="max-w-4xl mx-auto px-6 lg:px-20">
           <div className="flex items-start gap-4 md:gap-8 mb-16">
             {/* Content */}
@@ -488,7 +484,6 @@ function AboutPage() {
           </div>
         </div>
       </footer>
-      </div>
     </main>
   );
 }
