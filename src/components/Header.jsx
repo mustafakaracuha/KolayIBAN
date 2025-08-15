@@ -108,7 +108,7 @@ function Header() {
                 role="menuitem"
                 aria-current={location.pathname === '/' ? 'page' : undefined}
               >
-                Nedir ?
+                Hakkında
               </Link>
             </div>
           </div>
