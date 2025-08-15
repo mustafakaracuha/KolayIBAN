@@ -1,54 +1,13 @@
 {
     "rewrites": [
-        {
-            "source": "/",
-            "destination": "/index.html"
-        },
-        {
-            "source": "/home",
-            "destination": "/index.html"
-        },
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
-    ],
-    "headers": [
-        {
-            "source": "/assets/index-Dox9KKlv.js",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "application/javascript; charset=utf-8"
-                }
-            ]
-        },
-        {
-            "source": "/assets/index-Ck94osA9.css",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "text/css; charset=utf-8"
-                }
-            ]
-        },
-        {
-            "source": "/assets/(.*).js",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "application/javascript; charset=utf-8"
-                }
-            ]
-        },
-        {
-            "source": "/assets/(.*).css",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "text/css; charset=utf-8"
-                }
-            ]
-        }
+      {
+        "source": "/assets/(.*)",
+        "destination": "/assets/:splat"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
     ]
-}
+  }
+  
