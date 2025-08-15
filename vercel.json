@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/assets/(.*)",
-        "destination": "/assets/:splat"
+        "destination": "/assets/$1"
       },
       {
         "source": "/(.*)",
@@ -18,3 +18,4 @@
       }
     ]
   }
+  
