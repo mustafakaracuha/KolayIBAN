@@ -15,6 +15,24 @@
     ],
     "headers": [
         {
+            "source": "/assets/index-Dox9KKlv.js",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/javascript; charset=utf-8"
+                }
+            ]
+        },
+        {
+            "source": "/assets/index-Ck94osA9.css",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "text/css; charset=utf-8"
+                }
+            ]
+        },
+        {
             "source": "/assets/(.*).js",
             "headers": [
                 {

@@ -19,24 +19,6 @@
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
-    },
-    {
-      "src": "/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/favicon.svg",
-      "sizes": "180x180",
-      "type": "image/svg+xml",
-      "purpose": "any"
     }
   ],
   "screenshots": [
@@ -67,25 +49,13 @@
       "name": "IBAN Ekle",
       "short_name": "Ekle",
       "description": "Yeni IBAN ekle",
-      "url": "/home?action=add",
-      "icons": [
-        {
-          "src": "/favicon.svg",
-          "sizes": "96x96"
-        }
-      ]
+      "url": "/home?action=add"
     },
     {
       "name": "IBAN Ara",
       "short_name": "Ara",
       "description": "IBAN ara",
-      "url": "/home?action=search",
-      "icons": [
-        {
-          "src": "/favicon.svg",
-          "sizes": "96x96"
-        }
-      ]
+      "url": "/home?action=search"
     }
   ]
 }
