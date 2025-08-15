@@ -15,6 +15,32 @@
     ],
     "headers": [
         {
+            "source": "/assets/index-Dox9KKlv.js",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/javascript; charset=utf-8"
+                },
+                {
+                    "key": "Cache-Control",
+                    "value": "no-cache, no-store, must-revalidate"
+                }
+            ]
+        },
+        {
+            "source": "/assets/index-Ck94osA9.css",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "text/css; charset=utf-8"
+                },
+                {
+                    "key": "Cache-Control",
+                    "value": "no-cache, no-store, must-revalidate"
+                }
+            ]
+        },
+        {
             "source": "/assets/(.*).js",
             "headers": [
                 {
@@ -33,19 +59,6 @@
                 {
                     "key": "Content-Type",
                     "value": "text/css; charset=utf-8"
-                },
-                {
-                    "key": "Cache-Control",
-                    "value": "no-cache, no-store, must-revalidate"
-                }
-            ]
-        },
-        {
-            "source": "/assets/(.*).mjs",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "application/javascript; charset=utf-8"
                 },
                 {
                     "key": "Cache-Control",
